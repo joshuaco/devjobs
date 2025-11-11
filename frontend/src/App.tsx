@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import HeroSection from '@/components/hero-section';
 import HeroFeatures from '@/components/hero-features';
+import Footer from '@/components/footer';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <HeroSection />
         <HeroFeatures />
       </main>
+
+      <Footer />
     </>
   );
 }

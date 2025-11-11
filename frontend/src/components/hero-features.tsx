@@ -25,7 +25,7 @@ const features = [
 
 function HeroFeatures() {
   return (
-    <section className='mt-16'>
+    <section className='my-16'>
       <header className='text-center max-w-2xl mx-auto'>
         <h3 className='text-3xl font-bold text-white'>¿Por qué DevJobs?</h3>
         <p className='text-muted text-md mt-4'>

@@ -30,7 +30,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <div className='flex gap-3'>
+      <div className='hidden md:flex gap-3'>
         <a
           href='#'
           type='button'
