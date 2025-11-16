@@ -1,19 +1,11 @@
-import Header from '@/components/header';
-import Footer from '@/components/footer';
-import HeroFeatures from '@/components/hero-features';
-import HeroSection from '@/components/hero-section';
+import HeroFeatures from '@/components/sections/hero/hero-features';
+import HeroSection from '@/components/sections/hero/hero-section';
 
 function HomePage() {
   return (
     <>
-      <Header />
-
-      <main>
-        <HeroSection />
-        <HeroFeatures />
-      </main>
-
-      <Footer />
+      <HeroSection />
+      <HeroFeatures />
     </>
   );
 }
