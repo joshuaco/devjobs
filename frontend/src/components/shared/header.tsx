@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 function Header() {
   return (
     <header className='bg-background px-4 py-5 flex justify-between items-center gap-2'>
@@ -20,10 +22,10 @@ function Header() {
       <nav className=''>
         <ul className='flex gap-6 items-center text-white font-semibold'>
           <li>
-            <a href='#'>Inicio</a>
+            <Link to='/'>Inicio</Link>
           </li>
           <li>
-            <a href='#'>Empleos</a>
+            <Link to='/search'>Empleos</Link>
           </li>
           <li>
             <a href='#'>Empresas</a>
