@@ -1,8 +1,12 @@
 import { SearchIcon } from 'lucide-react';
 
-function SearchForm() {
+interface SearchFormProps {
+  maxWidth?: string;
+}
+
+function SearchForm({ maxWidth = 'max-w-2xl' }: SearchFormProps) {
   return (
-    <form role='search' className='flex mx-auto w-full max-w-2xl justify-center'>
+    <form role='search' className={`flex mx-auto w-full ${maxWidth} justify-center`}>
       <div className='flex gap-2 items-center bg-input rounded-md p-2 w-full shadow-md pl-4'>
         <SearchIcon className='w-6 h-6 text-muted' />
         <input

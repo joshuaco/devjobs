@@ -1,0 +1,24 @@
+import { ChevronDownIcon } from 'lucide-react';
+
+interface JobFilterProps {
+  selectName: string;
+  selectId: string;
+  selectValue: string;
+}
+
+function JobFilter({ selectName, selectId, selectValue }: JobFilterProps) {
+  return (
+    <div className='relative inline-flex items-center w-full sm:w-auto'>
+      <select
+        name={`filter-${selectName}`}
+        id={selectId}
+        className='appearance-none bg-primary rounded-md px-3 py-2 text-white text-sm font-medium focus:outline-none focus:ring-1 focus:ring-primary-hover w-full pr-8'
+      >
+        <option value='all'>{selectValue}</option>
+      </select>
+      <ChevronDownIcon className='pointer-events-none absolute right-2 h-4 w-4 text-white' />
+    </div>
+  );
+}
+
+export default JobFilter;
