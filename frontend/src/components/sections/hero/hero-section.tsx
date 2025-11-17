@@ -10,17 +10,19 @@ function HeroSection() {
       />
 
       <article className='text-center max-w-5xl mb-8'>
-        <h1 className='text-6xl font-bold text-white mb-4'>
+        <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4'>
           Encuentra el trabajo de tus sueños
         </h1>
 
-        <p className='text-xl text-white max-w-3xl mx-auto'>
+        <p className='text-lg sm:text-xl text-white max-w-3xl mx-auto'>
           Únete a la comunidad más grande de desarrolladores y encuentra tu próxima
           oportunidad.
         </p>
       </article>
 
-      <SearchForm />
+      <div className='px-4 md:px-0 w-full'>
+        <SearchForm />
+      </div>
     </section>
   );
 }

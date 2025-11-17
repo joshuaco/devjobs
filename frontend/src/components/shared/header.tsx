@@ -1,8 +1,21 @@
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from 'react-router';
+import MobileMenu from './mobile-menu';
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <header className='bg-background px-4 py-5 flex justify-between items-center gap-2'>
+    <header className='bg-background px-4 py-5 flex justify-between items-center gap-2 relative'>
       <h1 className='text-2xl font-bold flex gap-3'>
         <svg
           fill='none'
@@ -19,7 +32,9 @@ function Header() {
         </svg>
         <span className='text-white'>DevJobs</span>
       </h1>
-      <nav className=''>
+
+      {/* Desktop navigation */}
+      <nav className='hidden md:block'>
         <ul className='flex gap-6 items-center text-white font-semibold'>
           <li>
             <Link to='/'>Inicio</Link>
@@ -32,6 +47,18 @@ function Header() {
           </li>
         </ul>
       </nav>
+
+      {/* Mobile navigation */}
+      <button
+        onClick={toggleMobileMenu}
+        className='md:hidden text-white focus:outline-none z-50'
+        aria-label='Toggle mobile menu'
+      >
+        {isOpen ? <X /> : <Menu />}
+      </button>
+
+      <MobileMenu isOpen={isOpen} onClose={closeMobileMenu} />
+
       <div className='hidden md:flex gap-3'>
         <a
           href='#'
