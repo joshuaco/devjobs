@@ -1,6 +1,6 @@
-import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router';
+import { Menu, X } from 'lucide-react';
 import MobileMenu from './mobile-menu';
 
 function Header() {
@@ -57,7 +57,7 @@ function Header() {
         {isOpen ? <X /> : <Menu />}
       </button>
 
-      <MobileMenu isOpen={isOpen} onClose={closeMobileMenu} />
+      {isOpen && <MobileMenu isOpen={isOpen} onClose={closeMobileMenu} />}
 
       <div className='hidden md:flex gap-3'>
         <a
