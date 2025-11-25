@@ -4,15 +4,44 @@ import Pagination from '@/components/sections/job/pagination';
 import JobFilters from '@/components/sections/job/job-filters';
 import JobCard from '@/components/sections/job/job-card';
 import jobData from '@/data.json';
+import type { Filters } from '@/types/form-types';
 
 const RESULTS_PER_PAGE = 5;
 
 function SearchPage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const jobs = jobData.slice((currentPage - 1) * RESULTS_PER_PAGE, currentPage * RESULTS_PER_PAGE);
+  const [search, setSearch] = useState('');
+  const [filters, setFilters] = useState<Filters>({
+    technology: 'all',
+    location: 'all',
+    experience: 'all'
+  });
+
+  const filteredJobs = jobData.filter((job) => {
+    return (
+      (filters.technology === 'all' ||
+        job.data.technology.includes(filters.technology)) &&
+      (filters.location === 'all' ||
+        job.data.modalidad.includes(filters.location)) &&
+      (filters.experience === 'all' ||
+        job.data.nivel.includes(filters.experience)) &&
+      (search === '' || job.titulo.toLowerCase().includes(search))
+    );
+  });
+
+  const jobs = filteredJobs.slice(
+    (currentPage - 1) * RESULTS_PER_PAGE,
+    currentPage * RESULTS_PER_PAGE
+  );
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
+  };
+
+  const handleSearch = (filters: Filters, search: string) => {
+    setFilters(filters);
+    setSearch(search);
+    setCurrentPage(1);
   };
 
   return (
@@ -27,8 +56,9 @@ function SearchPage() {
       </header>
 
       <section className='my-8 w-full max-w-6xl px-4 mx-auto flex flex-col gap-3'>
-        <SearchForm maxWidth='w-full' />
-        <JobFilters />
+        <SearchForm maxWidth='w-full' onSearch={handleSearch}>
+          <JobFilters />
+        </SearchForm>
       </section>
 
       <section className='my-8 w-full max-w-6xl px-4 mx-auto flex flex-col gap-6'>
@@ -47,7 +77,7 @@ function SearchPage() {
         </div>
 
         <Pagination
-          totalPages={Math.ceil(jobData.length / RESULTS_PER_PAGE)}
+          totalPages={Math.ceil(filteredJobs.length / RESULTS_PER_PAGE)}
           currentPage={currentPage}
           onPageChange={handlePageChange}
         />
