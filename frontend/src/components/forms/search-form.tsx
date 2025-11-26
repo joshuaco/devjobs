@@ -1,35 +1,24 @@
 import { SearchIcon } from 'lucide-react';
-import type { Filters } from '@/types/form-types';
 
 interface SearchFormProps {
   maxWidth?: string;
-  children?: React.ReactNode;
-  onSearch?: (filters: Filters, search: string) => void;
+  onSearch?: (search: string) => void;
 }
 
-function SearchForm({
-  maxWidth = 'max-w-2xl',
-  children,
-  onSearch
-}: SearchFormProps) {
+function SearchForm({ maxWidth = 'max-w-2xl', onSearch }: SearchFormProps) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.target as HTMLFormElement);
-    const filters = {
-      technology: formData.get('filter-technology') as string,
-      location: formData.get('filter-location') as string,
-      experience: formData.get('filter-experience') as string
-    };
     const search = formData.get('search') as string;
 
-    onSearch?.(filters, search.toLowerCase().trim());
+    onSearch?.(search.toLowerCase().trim());
   };
 
   return (
     <form
       role='search'
-      className={`flex flex-col gap-3 mx-auto w-full ${maxWidth} justify-center`}
+      className={`flex mx-auto w-full ${maxWidth} justify-center`}
       onSubmit={handleSubmit}
     >
       <div className='flex gap-2 items-center bg-input rounded-md p-2 w-full shadow-md pl-4'>
@@ -47,7 +36,6 @@ function SearchForm({
           Buscar
         </button>
       </div>
-      {children}
     </form>
   );
 }

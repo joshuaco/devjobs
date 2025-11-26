@@ -38,9 +38,13 @@ function SearchPage() {
     setCurrentPage(page);
   };
 
-  const handleSearch = (filters: Filters, search: string) => {
-    setFilters(filters);
+  const handleSearch = (search: string) => {
     setSearch(search);
+    setCurrentPage(1);
+  };
+
+  const handleChangeFilters = (filters: Filters) => {
+    setFilters(filters);
     setCurrentPage(1);
   };
 
@@ -56,9 +60,8 @@ function SearchPage() {
       </header>
 
       <section className='my-8 w-full max-w-6xl px-4 mx-auto flex flex-col gap-3'>
-        <SearchForm maxWidth='w-full' onSearch={handleSearch}>
-          <JobFilters />
-        </SearchForm>
+        <SearchForm maxWidth='w-full' onSearch={handleSearch} />
+        <JobFilters onFiltersChange={handleChangeFilters} filters={filters} />
       </section>
 
       <section className='my-8 w-full max-w-6xl px-4 mx-auto flex flex-col gap-6'>
