@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSearch } from '@/hooks/useSearch';
+import { useFilters } from '@/hooks/useFilters';
 import SearchForm from '@/components/forms/search-form';
 import Pagination from '@/components/sections/job/pagination';
 import JobFilters from '@/components/sections/job/job-filters';
@@ -11,12 +12,7 @@ const RESULTS_PER_PAGE = 5;
 
 function SearchPage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [filters, setFilters] = useState<Filters>({
-    technology: 'all',
-    location: 'all',
-    experience: 'all'
-  });
-
+  const { filters, handleChangeFilters: setFilters } = useFilters();
   const { search, handleSearch: setSearch } = useSearch();
 
   const filteredJobs = jobData.filter((job) => {
