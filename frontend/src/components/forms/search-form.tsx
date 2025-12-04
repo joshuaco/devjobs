@@ -12,7 +12,7 @@ function SearchForm({ maxWidth = 'max-w-2xl', onSearch }: SearchFormProps) {
     const formData = new FormData(e.target as HTMLFormElement);
     const search = formData.get('search') as string;
 
-    onSearch?.(search.toLowerCase().trim());
+    onSearch?.(search);
   };
 
   return (
