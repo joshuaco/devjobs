@@ -1,36 +1,19 @@
 import { useState } from 'react';
+import { Loader2 } from 'lucide-react';
+import { useJobs } from '@/hooks/useJobs';
 import { useSearch } from '@/hooks/useSearch';
 import { useFilters } from '@/hooks/useFilters';
 import SearchForm from '@/components/forms/search-form';
 import Pagination from '@/components/sections/job/pagination';
 import JobFilters from '@/components/sections/job/job-filters';
 import JobCard from '@/components/sections/job/job-card';
-import jobData from '@/data.json';
 import type { Filters } from '@/types/form-types';
-
-const RESULTS_PER_PAGE = 5;
 
 function SearchPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const { filters, handleChangeFilters: setFilters } = useFilters();
   const { search, handleSearch: setSearch } = useSearch();
-
-  const filteredJobs = jobData.filter((job) => {
-    return (
-      (filters.technology === 'all' ||
-        job.data.technology.includes(filters.technology)) &&
-      (filters.location === 'all' ||
-        job.data.modalidad.includes(filters.location)) &&
-      (filters.experience === 'all' ||
-        job.data.nivel.includes(filters.experience)) &&
-      (search === '' || job.titulo.toLowerCase().includes(search))
-    );
-  });
-
-  const jobs = filteredJobs.slice(
-    (currentPage - 1) * RESULTS_PER_PAGE,
-    currentPage * RESULTS_PER_PAGE
-  );
+  const { jobs, isLoading, totalPages } = useJobs(filters, search, currentPage);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -59,26 +42,38 @@ function SearchPage() {
 
       <section className='my-8 w-full max-w-6xl px-4 mx-auto flex flex-col gap-3'>
         <SearchForm maxWidth='w-full' onSearch={handleSearch} />
-        <JobFilters onFiltersChange={handleChangeFilters} filters={filters} />
+        <JobFilters
+          onFiltersChange={handleChangeFilters}
+          filters={filters}
+          jobs={jobs}
+        />
       </section>
 
       <section className='my-8 w-full max-w-6xl px-4 mx-auto flex flex-col gap-6'>
-        <h2 className='text-2xl font-bold text-white'>Resultados de la búsqueda</h2>
+        <h2 className='text-2xl font-bold text-white'>
+          {isLoading ? 'Buscando trabajos...' : 'Resultados de la búsqueda'}
+        </h2>
 
         <div className='border-muted/25 border rounded-md'>
-          {jobs.map((job) => (
-            <JobCard
-              key={job.id}
-              title={job.titulo}
-              company={job.empresa}
-              location={job.ubicacion}
-              description={job.descripcion}
-            />
-          ))}
+          {isLoading ? (
+            <div className='flex items-center justify-center py-4'>
+              <Loader2 className='w-8 h-8 text-white animate-spin' />
+            </div>
+          ) : (
+            jobs.map((job) => (
+              <JobCard
+                key={job.id}
+                title={job.titulo}
+                company={job.empresa}
+                location={job.ubicacion}
+                description={job.descripcion}
+              />
+            ))
+          )}
         </div>
 
         <Pagination
-          totalPages={Math.ceil(filteredJobs.length / RESULTS_PER_PAGE)}
+          totalPages={totalPages}
           currentPage={currentPage}
           onPageChange={handlePageChange}
         />

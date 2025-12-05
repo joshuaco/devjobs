@@ -1,0 +1,42 @@
+import { useEffect, useState } from 'react';
+import { getData } from '@/api/get-data';
+import type { Jobs } from '@/types/job-types';
+import type { Filters } from '@/types/form-types';
+
+const RESULTS_PER_PAGE = 10;
+
+export function useJobs(filters: Filters, search: string, currentPage: number) {
+  const [jobs, setJobs] = useState<Jobs>([]);
+  const [totalJobs, setTotalJobs] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+
+      const params = new URLSearchParams();
+
+      if (search) params.append('text', search);
+      if (filters.technology !== 'all')
+        params.append('technology', filters.technology);
+      if (filters.location !== 'all') params.append('type', filters.location);
+      if (filters.experience !== 'all') params.append('level', filters.experience);
+
+      const offset = (currentPage - 1) * RESULTS_PER_PAGE;
+      params.append('limit', RESULTS_PER_PAGE.toString());
+      params.append('offset', offset.toString());
+
+      const queryParams = params.toString();
+      const jobs = await getData(queryParams);
+
+      setJobs(jobs.data);
+      setTotalJobs(jobs.total);
+      setIsLoading(false);
+    };
+    fetchData();
+  }, [filters, search, currentPage]);
+
+  const totalPages = Math.ceil(totalJobs / RESULTS_PER_PAGE) ?? 1;
+
+  return { jobs, totalPages, isLoading };
+}

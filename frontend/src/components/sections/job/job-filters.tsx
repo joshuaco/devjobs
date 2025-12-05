@@ -1,18 +1,19 @@
 import type { Filters } from '@/types/form-types';
+import type { Jobs } from '@/types/job-types';
 import JobFilter from './job-filter';
-import jobData from '@/data.json';
 
 interface JobFiltersProps {
   onFiltersChange: (filters: Filters) => void;
   filters: Filters;
+  jobs: Jobs;
 }
 
-function JobFilters({ onFiltersChange, filters }: JobFiltersProps) {
+function JobFilters({ onFiltersChange, filters, jobs }: JobFiltersProps) {
   const technologies = Array.from(
-    new Set(jobData.map((job) => job.data.technology))
+    new Set(jobs.map((job) => job.data.technology).flat())
   );
-  const locations = Array.from(new Set(jobData.map((job) => job.data.modalidad)));
-  const experiences = Array.from(new Set(jobData.map((job) => job.data.nivel)));
+  const locations = Array.from(new Set(jobs.map((job) => job.data.modalidad)));
+  const experiences = Array.from(new Set(jobs.map((job) => job.data.nivel)));
 
   return (
     <div className='grid grid-cols-2 sm:flex gap-3 items-center'>
