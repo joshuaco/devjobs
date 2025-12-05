@@ -1,6 +1,13 @@
+import { useNavigate } from 'react-router';
 import SearchForm from '@/components/forms/search-form';
 
 function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleSearch = (search: string) => {
+    navigate(`/search?query=${encodeURIComponent(search)}`);
+  };
+
   return (
     <section className='relative h-[500px] w-full flex flex-col items-center justify-center'>
       <img
@@ -21,7 +28,7 @@ function HeroSection() {
       </article>
 
       <div className='px-4 md:px-0 w-full'>
-        <SearchForm />
+        <SearchForm onSearch={handleSearch} />
       </div>
     </section>
   );
