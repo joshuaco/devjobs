@@ -7,5 +7,6 @@ export async function getData(queryParams: string) {
     return data;
   } catch (error) {
     console.error('Error fetching data: ', error);
+    return null;
   }
 }

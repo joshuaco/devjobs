@@ -27,10 +27,15 @@ export function useJobs(filters: Filters, search: string, currentPage: number) {
       params.append('offset', offset.toString());
 
       const queryParams = params.toString();
-      const jobs = await getData(queryParams);
+      const result = await getData(queryParams);
 
-      setJobs(jobs.data);
-      setTotalJobs(jobs.total);
+      if (result) {
+        setJobs(result.data);
+        setTotalJobs(result.total);
+      } else {
+        setJobs([]);
+        setTotalJobs(0);
+      }
       setIsLoading(false);
     };
     fetchData();
