@@ -6,6 +6,7 @@ import { useFilters } from '@/hooks/useFilters';
 import SearchForm from '@/components/forms/search-form';
 import Pagination from '@/components/sections/job/pagination';
 import JobFilters from '@/components/sections/job/job-filters';
+import JobFilterPill from '@/components/sections/job/job-filter-pill';
 import JobCard from '@/components/sections/job/job-card';
 import type { Filters } from '@/types/form-types';
 
@@ -29,6 +30,16 @@ function SearchPage() {
     setCurrentPage(1);
   };
 
+  const handleRemoveFilter = (filterKey: keyof Filters) => {
+    setFilters({ ...filters, [filterKey]: '' });
+    setCurrentPage(1);
+  };
+
+  const handleClearAllFilters = () => {
+    setFilters({ technology: '', location: '', experience: '' });
+    setCurrentPage(1);
+  };
+
   return (
     <>
       <header className='max-w-4xl mx-auto my-6 px-4'>
@@ -46,6 +57,11 @@ function SearchPage() {
           onFiltersChange={handleChangeFilters}
           filters={filters}
           jobs={jobs}
+        />
+        <JobFilterPill
+          filters={filters}
+          onRemoveFilter={handleRemoveFilter}
+          onClearAll={handleClearAllFilters}
         />
       </section>
 

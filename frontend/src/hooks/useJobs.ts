@@ -17,10 +17,9 @@ export function useJobs(filters: Filters, search: string, currentPage: number) {
       const params = new URLSearchParams();
 
       if (search) params.append('text', search);
-      if (filters.technology !== 'all')
-        params.append('technology', filters.technology);
-      if (filters.location !== 'all') params.append('type', filters.location);
-      if (filters.experience !== 'all') params.append('level', filters.experience);
+      if (filters.technology) params.append('technology', filters.technology);
+      if (filters.location) params.append('type', filters.location);
+      if (filters.experience) params.append('level', filters.experience);
 
       const offset = (currentPage - 1) * RESULTS_PER_PAGE;
       params.append('limit', RESULTS_PER_PAGE.toString());

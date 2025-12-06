@@ -24,11 +24,12 @@ function JobFilter({
         name={`filter-${selectName}`}
         id={selectId}
         className='appearance-none bg-primary rounded-md px-3 py-2 text-white text-sm font-medium focus:outline-none focus:ring-1 focus:ring-primary-hover w-full pr-8'
+        value={filters[selectName as keyof Filters] ?? ''}
         onChange={(e) =>
           onFiltersChange({ ...filters, [selectName]: e.target.value })
         }
       >
-        <option value='all'>{selectValue}</option>
+        <option value=''>{selectValue}</option>
         {options?.map((option) => (
           <option key={option} value={option}>
             {option.charAt(0).toUpperCase() + option.slice(1)}
