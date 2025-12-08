@@ -10,7 +10,8 @@ export function useSearch() {
   useEffect(() => {
     const query = searchParams.get('query') ?? '';
     setSearch(query.toLowerCase().trim());
-  }, [searchParams]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams.get('query')]);
 
   const handleSearch = (searchQuery: string) => {
     setSearch(searchQuery.toLowerCase().trim());
