@@ -7,6 +7,7 @@ import SearchForm from '@/components/forms/search-form';
 import Pagination from '@/components/sections/job/pagination';
 import JobFilters from '@/components/sections/job/job-filters';
 import JobFilterPill from '@/components/sections/job/job-filter-pill';
+import JobEmptyState from '@/components/sections/job/job-empty-state';
 import JobCard from '@/components/sections/job/job-card';
 import type { Filters } from '@/types/form-types';
 
@@ -75,7 +76,7 @@ function SearchPage() {
             <div className='flex items-center justify-center py-4'>
               <Loader2 className='w-8 h-8 text-white animate-spin' />
             </div>
-          ) : (
+          ) : jobs.length > 0 ? (
             jobs.map((job) => (
               <JobCard
                 key={job.id}
@@ -85,6 +86,8 @@ function SearchPage() {
                 description={job.descripcion}
               />
             ))
+          ) : (
+            <JobEmptyState />
           )}
         </div>
 
