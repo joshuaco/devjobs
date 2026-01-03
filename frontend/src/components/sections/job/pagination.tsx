@@ -1,46 +1,52 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link, useSearchParams } from 'react-router';
 
 interface PaginationProps {
   totalPages: number;
   currentPage: number;
-  onPageChange: (page: number) => void;
 }
 
-function Pagination({ totalPages, currentPage, onPageChange }: PaginationProps) {
+function Pagination({ totalPages, currentPage }: PaginationProps) {
+  const [searchParams] = useSearchParams();
+
+  const getPageUrl = (page: number) => {
+    const params = new URLSearchParams(searchParams);
+    page > 1 ? params.set('page', page.toString()) : params.delete('page');
+    return `?${params.toString()}`;
+  }
+
   const currentPageStyle =
     'bg-primary-hover px-3 py-1 rounded-md text-white font-medium';
+
   const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
 
   return (
     <nav className='flex items-center justify-center gap-6 mt-2'>
-      <a
-        href={`#page=${currentPage - 1}`}
+      <Link
+        to={getPageUrl(currentPage - 1)}
         className={`${currentPage === 1 ? 'opacity-50 pointer-events-none' : ''}`}
-        onClick={() => onPageChange(currentPage - 1)}
       >
         <ChevronLeft className='w-4 h-4 text-white' />
-      </a>
+      </Link>
 
       {pages.map((page: number) => (
-        <a
+        <Link
           key={page}
-          href={`#page=${page}`}
+          to={getPageUrl(page)}
           className={`${currentPage === page ? currentPageStyle : 'text-muted'}`}
-          onClick={() => onPageChange(page)}
         >
           {page}
-        </a>
+        </Link>
       ))}
 
-      <a
-        href={`#page=${currentPage + 1}`}
+      <Link
+        to={getPageUrl(currentPage + 1)}
         className={`${
           currentPage === totalPages ? 'opacity-50 pointer-events-none' : ''
         }`}
-        onClick={() => onPageChange(currentPage + 1)}
       >
         <ChevronRight className='w-4 h-4 text-white' />
-      </a>
+      </Link>
     </nav>
   );
 }

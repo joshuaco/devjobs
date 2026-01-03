@@ -1,6 +1,5 @@
 import { SearchIcon } from 'lucide-react';
 import { useSearch } from '@/hooks/useSearch';
-import { useNavigate } from 'react-router';
 
 interface SearchFormProps {
   maxWidth?: string;
@@ -9,7 +8,6 @@ interface SearchFormProps {
 
 function SearchForm({ maxWidth = 'max-w-2xl', onSearch }: SearchFormProps) {
   const { search, handleSearch } = useSearch();
-  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,7 +16,6 @@ function SearchForm({ maxWidth = 'max-w-2xl', onSearch }: SearchFormProps) {
     const search = formData.get('search') as string;
 
     onSearch?.(search);
-    navigate(`/search?query=${encodeURIComponent(search)}`);
   };
 
   return (

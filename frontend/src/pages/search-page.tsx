@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import { useJobs } from '@/hooks/useJobs';
-import { useSearch } from '@/hooks/useSearch';
-import { useFilters } from '@/hooks/useFilters';
+import { useQueryParams } from '@/hooks/useQueryParams';
 import SearchForm from '@/components/forms/search-form';
 import Pagination from '@/components/sections/job/pagination';
 import JobFilters from '@/components/sections/job/job-filters';
@@ -12,34 +10,18 @@ import JobCard from '@/components/sections/job/job-card';
 import type { Filters } from '@/types/form-types';
 
 function SearchPage() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const { filters, handleChangeFilters: setFilters } = useFilters();
-  const { search, handleSearch: setSearch } = useSearch();
-  const { jobs, isLoading, totalPages } = useJobs(filters, search, currentPage);
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-  };
-
-  const handleChangeFilters = (filters: Filters) => {
-    setFilters(filters);
-    setCurrentPage(1);
-  };
-
-  const handleSearch = (searchQuery: string) => {
-    setSearch(searchQuery);
-    setCurrentPage(1);
-  };
+  const { query, page, filters, setFilters, setQuery} = useQueryParams();
+  const { jobs, isLoading, totalPages } = useJobs(filters, query, page);
 
   const handleRemoveFilter = (filterKey: keyof Filters) => {
     setFilters({ ...filters, [filterKey]: '' });
-    setCurrentPage(1);
   };
 
   const handleClearAllFilters = () => {
     setFilters({ technology: '', location: '', experience: '' });
-    setCurrentPage(1);
   };
+
+  console.log({query, page});
 
   return (
     <>
@@ -53,9 +35,9 @@ function SearchPage() {
       </header>
 
       <section className='my-8 w-full max-w-6xl px-4 mx-auto flex flex-col gap-3'>
-        <SearchForm maxWidth='w-full' onSearch={handleSearch} />
+        <SearchForm maxWidth='w-full' onSearch={setQuery} />
         <JobFilters
-          onFiltersChange={handleChangeFilters}
+          onFiltersChange={setFilters}
           filters={filters}
           jobs={jobs}
         />
@@ -93,8 +75,7 @@ function SearchPage() {
 
         <Pagination
           totalPages={totalPages}
-          currentPage={currentPage}
-          onPageChange={handlePageChange}
+          currentPage={page}
         />
       </section>
     </>
