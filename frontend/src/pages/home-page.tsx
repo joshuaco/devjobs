@@ -1,5 +1,4 @@
-import HeroFeatures from '@/components/sections/hero/hero-features';
-import HeroSection from '@/components/sections/hero/hero-section';
+import { HeroFeatures, HeroSection } from '@/features/home';
 
 function HomePage() {
   return (

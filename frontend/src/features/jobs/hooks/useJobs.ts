@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getData } from '@/api/get-data';
+import { getData } from '@/features/jobs/api/get-data';
 import type { Jobs } from '@/types/job-types';
 import type { Filters } from '@/types/form-types';
 

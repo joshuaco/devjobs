@@ -1,5 +1,5 @@
 import { SearchIcon } from 'lucide-react';
-import { useSearch } from '@/hooks/useSearch';
+import { useSearch } from '../hooks/useSearch';
 
 interface SearchFormProps {
   maxWidth?: string;
@@ -33,6 +33,7 @@ function SearchForm({ maxWidth = 'max-w-2xl', onSearch }: SearchFormProps) {
           className='w-full bg-transparent outline-none text-white p-1'
           value={search}
           onChange={(e) => handleSearch(e.target.value)}
+          required
         />
         <button
           type='submit'
