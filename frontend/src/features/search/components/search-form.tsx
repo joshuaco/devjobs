@@ -41,6 +41,7 @@ function SearchForm({ maxWidth = 'max-w-2xl', onSearch }: SearchFormProps) {
             className="bg-gray-600 rounded-full p-1"
             onClick={() => {
               onSearch('');
+              handleSearch('');
             }}
           >
             <XIcon className="w-4 h-4 text-white" />
