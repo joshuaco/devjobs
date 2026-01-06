@@ -5,6 +5,7 @@ function HeroSection() {
   const navigate = useNavigate();
 
   const handleSearch = (search: string) => {
+    if (search.trim() === '') return;
     navigate(`/search?query=${encodeURIComponent(search)}`);
   };
 
