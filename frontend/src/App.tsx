@@ -1,5 +1,5 @@
 import HomePage from '@/pages/home-page';
-import SearchPage from '@/pages/search-page';
+import SearchPage from '@/pages/jobs-page';
 import MainLayout from '@/layouts/main';
 import { Routes, Route } from 'react-router';
 

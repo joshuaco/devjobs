@@ -1,13 +1,5 @@
-import {
-  JobFilters,
-  JobFilterPill,
-  JobEmptyState,
-  JobCard,
-  Pagination,
-  useJobs,
-} from '@/features/jobs';
+import { JobList, JobFilters, JobFilterPill, useJobs } from '@/features/jobs';
 import { useQueryParams, SearchForm } from '@/features/search';
-import { Loader2 } from 'lucide-react';
 import type { Filters } from '@/types/form-types';
 
 function SearchPage() {
@@ -21,8 +13,6 @@ function SearchPage() {
   const handleClearAllFilters = () => {
     setFilters({ technology: '', location: '', experience: '' });
   };
-
-  console.log({ query, page });
 
   return (
     <>
@@ -54,27 +44,12 @@ function SearchPage() {
           {isLoading ? 'Buscando trabajos...' : 'Resultados de la búsqueda'}
         </h2>
 
-        <div className="border-muted/25 border rounded-md">
-          {isLoading ? (
-            <div className="flex items-center justify-center py-4">
-              <Loader2 className="w-8 h-8 text-white animate-spin" />
-            </div>
-          ) : jobs.length > 0 ? (
-            jobs.map((job) => (
-              <JobCard
-                key={job.id}
-                title={job.titulo}
-                company={job.empresa}
-                location={job.ubicacion}
-                description={job.descripcion}
-              />
-            ))
-          ) : (
-            <JobEmptyState />
-          )}
-        </div>
-
-        <Pagination totalPages={totalPages} currentPage={page} />
+        <JobList
+          isLoading={isLoading}
+          jobs={jobs}
+          page={page}
+          totalPages={totalPages}
+        />
       </section>
     </>
   );

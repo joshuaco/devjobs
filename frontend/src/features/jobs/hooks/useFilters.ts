@@ -5,7 +5,7 @@ export function useFilters() {
   const [filters, setFilters] = useState<Filters>({
     technology: '',
     location: '',
-    experience: ''
+    experience: '',
   });
 
   const handleChangeFilters = (filters: Filters) => {
