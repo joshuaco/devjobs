@@ -23,6 +23,7 @@ function JobList({ isLoading, jobs, page, totalPages }: JobListProps) {
           jobs.map((job) => (
             <JobCard
               key={job.id}
+              id={job.id}
               title={job.titulo}
               company={job.empresa}
               location={job.ubicacion}
