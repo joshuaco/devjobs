@@ -55,7 +55,7 @@ function JobPage() {
           <div className='flex flex-col gap-3 mt-2'>
             <h3 className="text-xl font-bold text-white md:text-2xl">Responsabilidades</h3>
             <ul className='flex flex-col gap-2'>
-              {job.content.responsibilities.split('\n').map((resp, index) => (
+              {job.content.responsibilities.split('\n').filter(resp => resp.trim()).map((resp, index) => (
                 <li key={index} className='flex items-center gap-2'>
                   <Check className='max-w-4 max-h-4 text-primary-light' />
                   <span className='text-white-gray'>{resp.slice(1)}</span>
@@ -66,7 +66,7 @@ function JobPage() {
           <div className='flex flex-col gap-3 mt-2'>
             <h3 className="text-xl font-bold text-white md:text-2xl">Requisitos</h3>
             <ul className='flex flex-col gap-2'>
-              {job.content.requirements.split('\n').map((req, index) => (
+              {job.content.requirements.split('\n').filter(req => req.trim()).map((req, index) => (
                 <li key={index} className='flex items-center gap-2'>
                   <Check className='max-w-4 max-h-4 text-primary-light' />
                   <span className='text-white-gray'>{req.slice(1)}</span>
