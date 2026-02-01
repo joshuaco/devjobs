@@ -15,35 +15,35 @@ function Header() {
   };
 
   return (
-    <header className='bg-background px-4 py-5 flex justify-between items-center gap-2 relative'>
-      <h1 className='text-2xl font-bold flex gap-3'>
+    <header className="bg-background px-4 py-4 flex justify-between items-center gap-2 relative border-b border-border">
+      <Link to="/" className="text-2xl font-bold flex gap-3">
         <svg
-          fill='none'
-          stroke='currentColor'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          strokeWidth='2'
-          viewBox='0 0 24 24'
-          xmlns='http://www.w3.org/2000/svg'
-          className='w-7 h-7 self-end text-primary-light'
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-7 h-7 self-end text-primary-light"
         >
-          <polyline points='16 18 22 12 16 6'></polyline>
-          <polyline points='8 6 2 12 8 18'></polyline>
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
         </svg>
-        <span className='text-white'>DevJobs</span>
-      </h1>
+        <span className="text-white">DevJobs</span>
+      </Link>
 
       {/* Desktop navigation */}
-      <nav className='hidden md:block'>
-        <ul className='flex gap-6 items-center text-white font-semibold'>
+      <nav className="hidden md:block">
+        <ul className="flex gap-6 items-center text-white font-semibold">
           <li>
-            <Link to='/'>Inicio</Link>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to='/search'>Empleos</Link>
+            <Link to="/search">Empleos</Link>
           </li>
           <li>
-            <a href='#'>Empresas</a>
+            <a href="#">Empresas</a>
           </li>
         </ul>
       </nav>
@@ -51,26 +51,26 @@ function Header() {
       {/* Mobile navigation */}
       <button
         onClick={toggleMobileMenu}
-        className='md:hidden text-white focus:outline-none z-50'
-        aria-label='Toggle mobile menu'
+        className="md:hidden text-white focus:outline-none z-50"
+        aria-label="Toggle mobile menu"
       >
         {isOpen ? <X /> : <Menu />}
       </button>
 
       {isOpen && <MobileMenu isOpen={isOpen} onClose={closeMobileMenu} />}
 
-      <div className='hidden md:flex gap-3'>
+      <div className="hidden md:flex gap-3">
         <a
-          href='#'
-          type='button'
-          className='px-3 py-1.5 bg-primary-dark rounded-md text-primary-light text-sm font-medium hover:outline-primary-light hover:outline-2 hover:outline-offset-2 hover:transition-all'
+          href="#"
+          type="button"
+          className="px-3 py-1.5 bg-primary-dark rounded-md text-primary-light text-sm font-medium hover:outline-primary-light hover:outline-2 hover:outline-offset-2 hover:transition-all"
         >
           Publicar un empleo
         </a>
         <a
-          href='#'
-          type='button'
-          className='px-3 py-1.5 bg-primary rounded-md text-white text-sm font-medium hover:outline-white hover:outline-2 hover:outline-offset-2 hover:transition-all'
+          href="#"
+          type="button"
+          className="px-3 py-1.5 bg-primary rounded-md text-white text-sm font-medium hover:outline-white hover:outline-2 hover:outline-offset-2 hover:transition-all"
         >
           Iniciar sesión
         </a>
