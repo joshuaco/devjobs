@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { Menu, X } from 'lucide-react';
 import MobileMenu from './mobile-menu';
 
@@ -37,13 +37,13 @@ function Header() {
       <nav className="hidden md:block">
         <ul className="flex gap-6 items-center text-white font-semibold">
           <li>
-            <Link to="/">Inicio</Link>
+            <NavLink to="/" className={({ isActive }) => isActive ? 'border-b-2 border-primary-light' : 'text-muted hover:text-white transition-colors'}>Inicio</NavLink>
           </li>
           <li>
-            <Link to="/search">Empleos</Link>
+            <NavLink to="/search" className={({ isActive }) => isActive ? 'border-b-2 border-primary-light' : 'text-muted hover:text-white transition-colors'}>Empleos</NavLink>
           </li>
           <li>
-            <a href="#">Empresas</a>
+            <NavLink to="/companies" className={({ isActive }) => isActive ? 'border-b-2 border-primary-light' : 'text-muted hover:text-white transition-colors'}>Empresas</NavLink>
           </li>
         </ul>
       </nav>
