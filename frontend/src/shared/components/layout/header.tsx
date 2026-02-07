@@ -37,7 +37,7 @@ function Header() {
       <nav className="hidden md:block">
         <ul className="flex gap-6 items-center text-white font-semibold">
           <li>
-            <NavLink to="/" className={({ isActive }) => isActive ? 'border-b-2 border-primary-light' : 'text-muted hover:text-white transition-colors'}>Inicio</NavLink>
+            <NavLink to="/" end className={({ isActive }) => isActive ? 'border-b-2 border-primary-light' : 'text-muted hover:text-white transition-colors'}>Inicio</NavLink>
           </li>
           <li>
             <NavLink to="/search" className={({ isActive }) => isActive ? 'border-b-2 border-primary-light' : 'text-muted hover:text-white transition-colors'}>Empleos</NavLink>
