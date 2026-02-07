@@ -30,13 +30,13 @@ function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </Link>
         </li>
         <li>
-          <a
-            href='#'
+          <Link
+            to='/companies'
             onClick={onClose}
             className='block px-4 py-3 hover:bg-primary-dark transition-colors'
           >
             Empresas
-          </a>
+          </Link>
         </li>
         <li className='border-t border-gray-700 px-4 py-3'>
           <a
