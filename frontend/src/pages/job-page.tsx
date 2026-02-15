@@ -1,3 +1,4 @@
+import useAuthStore from '@/store/auth-store';
 import { useJob } from '@/features/jobs/hooks/useJob';
 import { Check } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router';
@@ -5,6 +6,7 @@ import { useNavigate, useParams } from 'react-router';
 function JobPage() {
   const { id } = useParams();
   const { job, isLoading } = useJob(id!);
+  const { isLoggedIn } = useAuthStore();
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -51,9 +53,10 @@ function JobPage() {
               <span>{job.empresa}</span> - <span className='border-b-2 border-primary-hover text-white-gray'>{job.ubicacion}</span>
             </p>
           </div>
-          <button className="bg-primary-hover text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-primary-light/80 transition-colors">
-            <span className="hidden sm:block">Aplicar ahora</span>
-            <span className="block sm:hidden">Aplicar</span>
+          <button className="bg-primary-hover text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-primary-light/80 transition-colors disabled:bg-gray-500 whitespace-nowrap"
+            disabled={!isLoggedIn}>
+            <span className="hidden sm:block">{isLoggedIn ? "Aplicar ahora" : "Inicia Sesión"}</span>
+            <span className="block sm:hidden">{isLoggedIn ? "Aplicar" : "Inicia Sesión"}</span>
           </button>
         </header>
 
@@ -88,10 +91,7 @@ function JobPage() {
           <p className="text-white-gray">{job.content.about}</p>
 
           <footer className='border-t border-border mt-6 flex justify-end'>
-            <button className='bg-primary-hover text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-primary-light/80 transition-colors mt-4'>
-              <span className="hidden sm:block">Aplicar ahora</span>
-              <span className="block sm:hidden">Aplicar</span>
-            </button>
+
           </footer>
         </article>
       </section>

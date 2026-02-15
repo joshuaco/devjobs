@@ -1,3 +1,4 @@
+import useAuthStore from '@/store/auth-store';
 import { CheckIcon } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router';
@@ -12,6 +13,7 @@ interface JobCardProps {
 
 function JobCard({ id, title, company, location, description }: JobCardProps) {
   const [isApplied, setIsApplied] = useState(false);
+  const { isLoggedIn } = useAuthStore();
 
   const handleApplyClick = () => {
     setIsApplied(!isApplied);
@@ -32,13 +34,12 @@ function JobCard({ id, title, company, location, description }: JobCardProps) {
         </Link>
       </div>
       <button
-        className={`text-white flex items-center justify-center gap-2 px-5 py-2 rounded-md text-sm font-medium transition-all duration-300 w-full sm:w-auto ${
-          isApplied
-            ? 'bg-green-600'
-            : 'bg-primary-hover hover:bg-primary-hover/80'
-        }`}
+        className={`text-white flex items-center justify-center gap-2 px-5 py-2 rounded-md text-sm font-medium transition-all duration-300 whitespace-nowrap w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed ${isApplied
+          ? 'bg-green-600'
+          : 'bg-primary-hover hover:bg-primary-hover/80'
+          }`}
         onClick={handleApplyClick}
-        disabled={isApplied}
+        disabled={isApplied || !isLoggedIn}
       >
         {isApplied ? (
           <>
@@ -46,7 +47,7 @@ function JobCard({ id, title, company, location, description }: JobCardProps) {
             <span>Aplicaste</span>
           </>
         ) : (
-          'Aplicar'
+          "Aplicar"
         )}
       </button>
     </article>

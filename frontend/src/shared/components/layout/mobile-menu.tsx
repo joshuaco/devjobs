@@ -1,3 +1,4 @@
+import useAuthStore from '@/store/auth-store';
 import { Link } from 'react-router';
 
 interface MobileMenuProps {
@@ -7,6 +8,7 @@ interface MobileMenuProps {
 
 function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   if (!isOpen) return null;
+  const { isLoggedIn, login, logout } = useAuthStore();
 
   return (
     <nav className='md:hidden absolute top-full left-0 right-0 bg-background shadow-lg border-t border-gray-700 z-40'>
@@ -39,20 +41,19 @@ function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </Link>
         </li>
         <li className='border-t border-gray-700 px-4 py-3'>
-          <a
-            href='#'
+          <Link
+            to='#'
             className='block mb-2 px-3 py-2 bg-primary-dark rounded-md text-primary-light text-sm font-medium text-center hover:outline-primary-light hover:outline-2 hover:outline-offset-2 hover:transition-all'
             onClick={onClose}
           >
             Publicar un empleo
-          </a>
-          <a
-            href='#'
-            className='block px-3 py-2 bg-primary rounded-md text-white text-sm font-medium text-center hover:outline-white hover:outline-2 hover:outline-offset-2 hover:transition-all'
-            onClick={onClose}
+          </Link>
+          <button
+            className='block px-3 py-2 bg-primary rounded-md text-white text-sm font-medium text-center hover:outline-white hover:outline-2 hover:outline-offset-2 hover:transition-all w-full'
+            onClick={isLoggedIn ? logout : login}
           >
-            Iniciar sesión
-          </a>
+            {isLoggedIn ? "Cerrar Sesión" : "Iniciar sesión"}
+          </button>
         </li>
       </ul>
     </nav>

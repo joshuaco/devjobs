@@ -1,3 +1,4 @@
+import useAuthStore from '@/store/auth-store';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import { Menu, X } from 'lucide-react';
@@ -5,6 +6,7 @@ import MobileMenu from './mobile-menu';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { isLoggedIn, login, logout } = useAuthStore();
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
@@ -61,19 +63,19 @@ function Header() {
 
       <div className="hidden md:flex gap-3">
         <a
-          href="#"
+          onClick={() => { }}
           type="button"
           className="px-3 py-1.5 bg-primary-dark rounded-md text-primary-light text-sm font-medium hover:outline-primary-light hover:outline-2 hover:outline-offset-2 hover:transition-all"
         >
           Publicar un empleo
         </a>
-        <a
-          href="#"
+        <button
+          onClick={isLoggedIn ? logout : login}
           type="button"
           className="px-3 py-1.5 bg-primary rounded-md text-white text-sm font-medium hover:outline-white hover:outline-2 hover:outline-offset-2 hover:transition-all"
         >
-          Iniciar sesión
-        </a>
+          {isLoggedIn ? 'Cerrar sesión' : 'Iniciar sesión'}
+        </button>
       </div>
     </header>
   );
