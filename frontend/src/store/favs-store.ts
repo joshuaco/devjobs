@@ -25,7 +25,11 @@ const useFavoritesStore = create<FavoritesState>((set, get) => ({
   isFavorite: (id: string) => get().favorites.includes(id),
 
   toggleFavorite: (id: string) =>
-    get().isFavorite(id) ? get().removeFavorite(id) : get().addFavorite(id),
+    set((state) => ({
+      favorites: state.favorites.includes(id)
+        ? state.favorites.filter((favorite) => favorite !== id)
+        : [...state.favorites, id],
+    })),
 }));
 
 export default useFavoritesStore;
