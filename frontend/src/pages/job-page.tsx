@@ -1,12 +1,48 @@
-import useAuthStore from '@/store/auth-store';
 import { useJob } from '@/features/jobs/hooks/useJob';
-import { Check } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router';
+import { Check, Heart } from 'lucide-react';
+import useAuthStore from '@/store/auth-store';
+import useFavoritesStore from '@/store/favs-store';
+import type { Job } from '@/types/job-types';
+
+function JobPageHeader({ job }: { job: Job; }) {
+  const { isLoggedIn } = useAuthStore();
+  const { toggleFavorite, isFavorite } = useFavoritesStore();
+
+  return (
+    <header className="flex justify-between items-center gap-4">
+      <div className="flex flex-col gap-1">
+        <h1 className="text-2xl font-bold text-white md:text-3xl">
+          {job.titulo}
+        </h1>
+        <p className="text-muted">
+          <span className='flex gap-1'>
+            <span>{job.empresa}</span> - <span className='border-b-2 border-primary-hover text-white-gray'>{job.ubicacion}</span>
+            {isLoggedIn && (
+              <button
+                type='button'
+                onClick={() => toggleFavorite(job.id)}>
+                {isFavorite(job.id)
+                  ? <Heart className='w-4 h-4 fill-primary-light text-primary-light' />
+                  : <Heart className='w-4 h-4 text-primary-light' />}
+              </button>
+            )}
+          </span>
+        </p>
+      </div>
+      <button className="bg-primary-hover text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-primary-light/80 transition-colors disabled:bg-gray-500 whitespace-nowrap"
+        disabled={!isLoggedIn}>
+        <span className="hidden sm:block">{isLoggedIn ? "Aplicar ahora" : "Inicia Sesión"}</span>
+        <span className="block sm:hidden">{isLoggedIn ? "Aplicar" : "Inicia Sesión"}</span>
+      </button>
+    </header>
+  );
+}
 
 function JobPage() {
   const { id } = useParams();
   const { job, isLoading } = useJob(id!);
-  const { isLoggedIn } = useAuthStore();
+
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -44,21 +80,7 @@ function JobPage() {
       </nav>
 
       <section className="max-w-6xl mx-auto px-4 py-6">
-        <header className="flex justify-between items-center gap-4">
-          <div className="flex flex-col gap-1">
-            <h1 className="text-2xl font-bold text-white md:text-3xl">
-              {job.titulo}
-            </h1>
-            <p className="text-muted">
-              <span>{job.empresa}</span> - <span className='border-b-2 border-primary-hover text-white-gray'>{job.ubicacion}</span>
-            </p>
-          </div>
-          <button className="bg-primary-hover text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-primary-light/80 transition-colors disabled:bg-gray-500 whitespace-nowrap"
-            disabled={!isLoggedIn}>
-            <span className="hidden sm:block">{isLoggedIn ? "Aplicar ahora" : "Inicia Sesión"}</span>
-            <span className="block sm:hidden">{isLoggedIn ? "Aplicar" : "Inicia Sesión"}</span>
-          </button>
-        </header>
+        <JobPageHeader job={job} />
 
         <article className='py-8 flex flex-col gap-3'>
           <h2 className="text-xl font-bold text-white md:text-2xl">Descripción de la oferta</h2>

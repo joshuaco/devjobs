@@ -1,12 +1,14 @@
 import useAuthStore from '@/store/auth-store';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router';
-import { Menu, X } from 'lucide-react';
+import { Heart, Menu, X } from 'lucide-react';
 import MobileMenu from './mobile-menu';
+import useFavoritesStore from '@/store/favs-store';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { isLoggedIn, login, logout } = useAuthStore();
+  const { countFavorites } = useFavoritesStore();
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
@@ -61,14 +63,13 @@ function Header() {
 
       {isOpen && <MobileMenu isOpen={isOpen} onClose={closeMobileMenu} />}
 
-      <div className="hidden md:flex gap-3">
-        <a
-          onClick={() => { }}
-          type="button"
-          className="px-3 py-1.5 bg-primary-dark rounded-md text-primary-light text-sm font-medium hover:outline-primary-light hover:outline-2 hover:outline-offset-2 hover:transition-all"
-        >
-          Publicar un empleo
-        </a>
+      <div className="hidden md:flex gap-3 items-center">
+        {isLoggedIn && (
+          <div className='flex items-center gap-2'>
+            <Heart className='w-6 h-6 text-primary-light' />
+            <span className='text-sm text-primary-light'>{countFavorites()}</span>
+          </div>
+        )}
         <button
           onClick={isLoggedIn ? logout : login}
           type="button"
