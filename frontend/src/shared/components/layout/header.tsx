@@ -1,14 +1,14 @@
 import useAuthStore from '@/store/auth-store';
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router';
-import { Heart, Menu, X } from 'lucide-react';
+import { Link, NavLink, useNavigate, useLocation } from 'react-router';
+import { Menu, X, UserCircle } from 'lucide-react';
 import MobileMenu from './mobile-menu';
-import useFavoritesStore from '@/store/favs-store';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const { isLoggedIn, login, logout } = useAuthStore();
-  const { countFavorites } = useFavoritesStore();
+  const navigate = useNavigate();
+  const isLoggedIn = useAuthStore(state => state.isLoggedIn);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
@@ -16,6 +16,15 @@ function Header() {
 
   const closeMobileMenu = () => {
     setIsOpen(false);
+  };
+
+  const handleLogin = () => {
+    navigate('/login', { state: { from: location } });
+  };
+
+  const handleLogout = () => {
+    useAuthStore.getState().logout();
+    navigate('/');
   };
 
   return (
@@ -41,13 +50,19 @@ function Header() {
       <nav className="hidden md:block">
         <ul className="flex gap-6 items-center text-white font-semibold">
           <li>
-            <NavLink to="/" end className={({ isActive }) => isActive ? 'border-b-2 border-primary-light' : 'text-muted hover:text-white transition-colors'}>Inicio</NavLink>
+            <NavLink to="/" end className={({ isActive }) => isActive
+              ? 'border-b-2 border-primary-light'
+              : 'text-muted hover:text-white transition-colors'}>Inicio</NavLink>
           </li>
           <li>
-            <NavLink to="/search" className={({ isActive }) => isActive ? 'border-b-2 border-primary-light' : 'text-muted hover:text-white transition-colors'}>Empleos</NavLink>
+            <NavLink to="/search" className={({ isActive }) => isActive
+              ? 'border-b-2 border-primary-light'
+              : 'text-muted hover:text-white transition-colors'}>Empleos</NavLink>
           </li>
           <li>
-            <NavLink to="/companies" className={({ isActive }) => isActive ? 'border-b-2 border-primary-light' : 'text-muted hover:text-white transition-colors'}>Empresas</NavLink>
+            <NavLink to="/companies" className={({ isActive }) => isActive
+              ? 'border-b-2 border-primary-light'
+              : 'text-muted hover:text-white transition-colors'}>Empresas</NavLink>
           </li>
         </ul>
       </nav>
@@ -61,17 +76,22 @@ function Header() {
         {isOpen ? <X /> : <Menu />}
       </button>
 
-      {isOpen && <MobileMenu isOpen={isOpen} onClose={closeMobileMenu} />}
+      {isOpen && <MobileMenu isOpen={isOpen} onClose={closeMobileMenu} isLoggedIn={isLoggedIn} onLogin={handleLogin} onLogout={handleLogout} />}
 
       <div className="hidden md:flex gap-3 items-center">
         {isLoggedIn && (
-          <div className='flex items-center gap-2'>
-            <Heart className='w-6 h-6 text-primary-light' />
-            <span className='text-sm text-primary-light'>{countFavorites()}</span>
-          </div>
+          <>
+            <Link
+              to="/profile"
+              className="text-muted hover:text-white transition-colors"
+              aria-label="Perfil"
+            >
+              <UserCircle className="w-7 h-7" />
+            </Link>
+          </>
         )}
         <button
-          onClick={isLoggedIn ? logout : login}
+          onClick={isLoggedIn ? handleLogout : handleLogin}
           type="button"
           className="px-3 py-1.5 bg-primary rounded-md text-white text-sm font-medium hover:outline-white hover:outline-2 hover:outline-offset-2 hover:transition-all"
         >
