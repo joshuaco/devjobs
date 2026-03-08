@@ -8,9 +8,9 @@ import MobileMenu from './mobile-menu';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
   const isLoggedIn = useAuthStore(state => state.isLoggedIn);
   const clearFavorites = useFavoritesStore(state => state.clearFavorites);
-  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
