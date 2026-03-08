@@ -1,3 +1,4 @@
+import useFavoritesStore from '@/store/favs-store';
 import useAuthStore from '@/store/auth-store';
 import { useState } from 'react';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router';
@@ -8,6 +9,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const isLoggedIn = useAuthStore(state => state.isLoggedIn);
+  const clearFavorites = useFavoritesStore(state => state.clearFavorites);
   const location = useLocation();
 
   const toggleMobileMenu = () => {
@@ -24,6 +26,7 @@ function Header() {
 
   const handleLogout = () => {
     useAuthStore.getState().logout();
+    clearFavorites();
     navigate('/');
   };
 
