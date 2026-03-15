@@ -1,0 +1,14 @@
+{
+  "name": "devjobs-backend",
+  "type": "module",
+  "author": "Joshua",
+  "scripts": {
+    "build": "tsc",
+    "start": "node src/index.ts",
+    "dev": "node --watch src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "25.5.0",
+    "typescript": "5.9.3"
+  }
+}
