@@ -1,6 +1,6 @@
 import express from 'express';
-import { morgan } from './middlewares/morgan.ts';
 import jobsRouter from './routes/jobs.ts';
+import { morgan } from './middlewares/morgan.ts';
 
 const app = express();
 
