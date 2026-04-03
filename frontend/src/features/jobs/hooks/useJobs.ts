@@ -16,9 +16,9 @@ export function useJobs(filters: Filters, search: string, currentPage: number) {
 
       const params = new URLSearchParams();
 
-      if (search) params.append('text', search);
+      if (search) params.append('search', search);
       if (filters.technology) params.append('technology', filters.technology);
-      if (filters.location) params.append('type', filters.location);
+      if (filters.location) params.append('location', filters.location);
       if (filters.experience) params.append('level', filters.experience);
 
       const offset = (currentPage - 1) * RESULTS_PER_PAGE;

@@ -21,7 +21,7 @@ export type Job = {
   content: JobContent;
 };
 
-export type JobQueryParams = Partial<Job> & {
+export type JobQueryParams = {
   search?: string;
   experience?: string;
   technology?: string;

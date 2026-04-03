@@ -1,7 +1,7 @@
 export async function getData(queryParams: string) {
   try {
     const response = await fetch(
-      `https://jscamp-api.vercel.app/api/jobs?${queryParams}`
+      `https://devjobs-api-ruddy.vercel.app/api/jobs?${queryParams}`
     );
 
     if (!response.ok) {
@@ -18,7 +18,7 @@ export async function getData(queryParams: string) {
 export async function getJobData(id: string) {
   try {
     const response = await fetch(
-      `https://jscamp-api.vercel.app/api/jobs/${id}`
+      `https://devjobs-api-ruddy.vercel.app/api/jobs?${id}`
     );
 
     if (!response.ok) {
