@@ -45,7 +45,7 @@ const getJobs = (req: Request, res: Response) => {
 
   filteredJobs = filteredJobs.slice(offsetNumber, offsetNumber + limitNumber);
 
-  return res.json({ jobs: filteredJobs, total });
+  return res.json({ data: filteredJobs, total });
 };
 
 const getJobById = (req: Request, res: Response) => {
@@ -71,4 +71,21 @@ const getJobById = (req: Request, res: Response) => {
   return res.json(job);
 };
 
-export default { getJobs, getJobById };
+const createJob = (req: Request, res: Response) => {
+  const { titulo, empresa, ubicacion, descripcion, data, content } = req.body;
+
+  const newJob = {
+    id: crypto.randomUUID(),
+    titulo,
+    empresa,
+    ubicacion,
+    descripcion,
+    data,
+    content,
+  };
+
+  jobs.push(newJob);
+  return res.status(201).json(newJob);
+};
+
+export default { getJobs, getJobById, createJob };
