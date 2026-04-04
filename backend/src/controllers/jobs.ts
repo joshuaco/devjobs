@@ -32,4 +32,22 @@ const createJob = (req: Request, res: Response) => {
   return res.status(201).json(newJob);
 };
 
-export default { getJobs, getJobById, createJob };
+const updateJob = (req: Request, res: Response) => {
+  const { id } = req.params;
+  const jobData = req.body;
+  const updatedJob = jobModel.updateJob(id as string, jobData);
+  return res.status(200).json(updatedJob);
+};
+
+const deleteJob = (req: Request, res: Response) => {
+  const { id } = req.params;
+  const deletedJob = jobModel.deleteJob(id as string);
+
+  if (!deletedJob) {
+    return res.status(404).json({ message: 'Job not found' });
+  }
+
+  return res.status(204).json({ message: 'Job deleted successfully', deletedJob });
+};
+
+export default { getJobs, getJobById, createJob, updateJob, deleteJob };
