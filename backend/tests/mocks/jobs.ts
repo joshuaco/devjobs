@@ -1,14 +1,14 @@
 import type { Job } from '../../src/types/jobs.ts';
 
 export const sampleJob: Omit<Job, 'id'> = {
-  titulo: 'Frontend Developer',
-  empresa: 'Acme Corp',
-  ubicacion: 'Remote',
-  descripcion: 'Build amazing UIs',
+  title: 'Frontend Developer',
+  company: 'Acme Corp',
+  location: 'Remote',
+  description: 'Build amazing UIs',
   data: {
     technology: ['React', 'TypeScript'],
-    modalidad: 'Remoto',
-    nivel: 'Senior',
+    modality: 'Remoto',
+    level: 'Senior',
   },
   content: {
     description: 'Full description here',

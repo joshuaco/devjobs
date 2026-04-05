@@ -46,6 +46,6 @@ describe('POST /api/jobs', () => {
     const response = await request(app).post('/api/jobs').send(sampleJob);
     expect(response.status).toBe(201);
     expect(response.body).toHaveProperty('id');
-    expect(response.body.titulo).toBe(sampleJob.titulo);
+    expect(response.body.title).toBe(sampleJob.title);
   });
 });

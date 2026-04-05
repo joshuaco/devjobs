@@ -1,25 +1,5 @@
-export type JobData = {
-  technology: string[];
-  modalidad: string;
-  nivel: string;
-};
-
-export type JobContent = {
-  description: string;
-  responsibilities: string;
-  requirements: string;
-  about: string;
-};
-
-export type Job = {
-  id: string;
-  titulo: string;
-  empresa: string;
-  ubicacion: string;
-  descripcion: string;
-  data: JobData;
-  content: JobContent;
-};
+import { JobSchema } from '../schemas/job.ts';
+import type { z } from 'zod';
 
 export type JobQueryParams = {
   search?: string;
@@ -28,4 +8,11 @@ export type JobQueryParams = {
   location?: string;
   limit: string;
   offset: string;
+};
+
+export type Job = z.infer<typeof JobSchema>;
+
+export type JobsResponse = {
+  data: Job[];
+  total: number;
 };

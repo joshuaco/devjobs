@@ -23,13 +23,13 @@ const getJobs = (params: JobQueryParams) => {
 
     filteredJobs = filteredJobs.filter(
       (job) =>
-        job.titulo.toLowerCase().includes(searchTerm) ||
-        job.descripcion.toLowerCase().includes(searchTerm)
+        job.title.toLowerCase().includes(searchTerm) ||
+        job.description.toLowerCase().includes(searchTerm)
     );
   }
 
   if (experience) {
-    filteredJobs = filteredJobs.filter((job) => job.data.nivel === experience);
+    filteredJobs = filteredJobs.filter((job) => job.data.level === experience);
   }
 
   if (technology) {
@@ -39,7 +39,7 @@ const getJobs = (params: JobQueryParams) => {
   }
 
   if (location) {
-    filteredJobs = filteredJobs.filter((job) => job.data.modalidad === location);
+    filteredJobs = filteredJobs.filter((job) => job.data.modality === location);
   }
 
   const total = filteredJobs.length;
@@ -66,7 +66,7 @@ const createJob = (jobData: Omit<Job, 'id'>): Job => {
 const updateJob = (id: string, jobData: Partial<Job>): Job | null => {
   const jobIndex = typedJobs.findIndex((job) => job.id === id);
   if (jobIndex === -1) {
-    throw new Error('Job not found');
+    return null;
   }
 
   typedJobs[jobIndex] = { ...typedJobs[jobIndex], ...jobData } as Job;

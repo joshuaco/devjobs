@@ -1,14 +1,14 @@
 [
   {
     "id": "7a4d1d8b-1e45-4d8c-9f1a-8c2f9a9121a4",
-    "titulo": "Desarrollador de Software Senior",
-    "empresa": "Tech Solutions Inc.",
-    "ubicacion": "Remoto",
-    "descripcion": "Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.",
+    "title": "Desarrollador de Software Senior",
+    "company": "Tech Solutions Inc.",
+    "location": "Remoto",
+    "description": "Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.",
     "data": {
       "technology": ["react", "node", "javascript"],
-      "modalidad": "remoto",
-      "nivel": "senior"
+      "modality": "remoto",
+      "level": "senior"
     },
     "content": {
       "description": "Tech Solutions Inc. está buscando un Ingeniero de Software Senior altamente motivado y experimentado para unirse a nuestro equipo remoto. El candidato ideal tendrá una sólida formación en desarrollo de software, con experiencia en el diseño, desarrollo e implementación de soluciones de software escalables y de alto rendimiento. Como Ingeniero de Software Senior, usted será responsable de liderar proyectos de desarrollo, mentorizar a ingenieros junior y colaborar con equipos multifuncionales para entregar productos de software de alta calidad.",
@@ -19,14 +19,14 @@
   },
   {
     "id": "d35b2c89-5d60-4f26-b19a-6cfb2f1a0f57",
-    "titulo": "Analista de Datos",
-    "empresa": "Data Driven Co.",
-    "ubicacion": "Ciudad de México",
-    "descripcion": "Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y herramientas de visualización. Se requiere conocimiento en SQL, Python y R.",
+    "title": "Analista de Datos",
+    "company": "Data Driven Co.",
+    "location": "Ciudad de México",
+    "description": "Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y herramientas de visualización. Se requiere conocimiento en SQL, Python y R.",
     "data": {
       "technology": ["python", "sql", "r", "pandas"],
-      "modalidad": "cdmx",
-      "nivel": "junior"
+      "modality": "cdmx",
+      "level": "junior"
     },
     "content": {
       "description": "Data Driven Co. está en busca de un Analista de Datos para unirse a nuestro equipo en Ciudad de México. Esta posición es ideal para profesionales que están comenzando su carrera en análisis de datos y desean trabajar con grandes volúmenes de información para generar insights valiosos que impulsen decisiones de negocio.",
@@ -37,14 +37,14 @@
   },
   {
     "id": "e31f9a92-61d7-4b7a-b3a2-91e8c1f40b2d",
-    "titulo": "Desarrollador de Aplicaciones Móviles",
-    "empresa": "Mobile Apps Ltd.",
-    "ubicacion": "Guadalajara",
-    "descripcion": "Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.",
+    "title": "Desarrollador de Aplicaciones Móviles",
+    "company": "Mobile Apps Ltd.",
+    "location": "Guadalajara",
+    "description": "Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.",
     "data": {
       "technology": ["swift", "kotlin", "react-native", "flutter"],
-      "modalidad": "guadalajara",
-      "nivel": "mid-level"
+      "modality": "guadalajara",
+      "level": "mid-level"
     },
     "content": {
       "description": "Mobile Apps Ltd. busca un Desarrollador de Aplicaciones Móviles con experiencia en crear aplicaciones nativas y multiplataforma. Trabajarás en proyectos diversos que impactan a millones de usuarios, desarrollando soluciones móviles innovadoras y de alto rendimiento.",
@@ -55,10 +55,10 @@
   },
   {
     "id": "f62d8a34-923a-4ac2-9b0b-14e0ac2f5405",
-    "titulo": "Ingeniero de DevOps",
-    "empresa": "Cloud Services SA",
-    "ubicacion": "Remoto",
-    "descripcion": "Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructuras en la nube, automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS, Azure o GCP.",
+    "title": "Ingeniero de DevOps",
+    "company": "Cloud Services SA",
+    "location": "Remoto",
+    "description": "Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructuras en la nube, automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS, Azure o GCP.",
     "data": {
       "technology": [
         "aws",
@@ -68,8 +68,8 @@
         "kubernetes",
         "terraform"
       ],
-      "modalidad": "remoto",
-      "nivel": "mid-level"
+      "modality": "remoto",
+      "level": "mid-level"
     },
     "content": {
       "description": "Cloud Services SA busca un Ingeniero de DevOps para gestionar y optimizar nuestra infraestructura cloud. Serás responsable de implementar prácticas de CI/CD, automatizar despliegues y garantizar la alta disponibilidad de nuestros sistemas en producción.",
@@ -80,14 +80,14 @@
   },
   {
     "id": "a9f31a8e-ec38-4fd3-9114-88cc6d37a92b",
-    "titulo": "Diseñador UX/UI",
-    "empresa": "Creative Minds Studio",
-    "ubicacion": "Barcelona",
-    "descripcion": "Estamos buscando un diseñador UX/UI con pasión por crear experiencias digitales excepcionales. Se requiere experiencia en Figma, diseño centrado en el usuario y colaboración con equipos de desarrollo.",
+    "title": "Diseñador UX/UI",
+    "company": "Creative Minds Studio",
+    "location": "Barcelona",
+    "description": "Estamos buscando un diseñador UX/UI con pasión por crear experiencias digitales excepcionales. Se requiere experiencia en Figma, diseño centrado en el usuario y colaboración con equipos de desarrollo.",
     "data": {
       "technology": ["figma", "sketch", "adobe-xd", "prototyping"],
-      "modalidad": "barcelona",
-      "nivel": "mid-level"
+      "modality": "barcelona",
+      "level": "mid-level"
     },
     "content": {
       "description": "Creative Minds Studio busca un Diseñador UX/UI creativo y orientado al detalle para crear interfaces intuitivas y visualmente atractivas. Trabajarás en proyectos innovadores, desde la conceptualización hasta la entrega final.",
@@ -98,14 +98,14 @@
   },
   {
     "id": "c1b65b42-68c5-4f1c-a8c2-8d52c5a7a5d1",
-    "titulo": "Administrador de Bases de Datos",
-    "empresa": "Secure Data Corp.",
-    "ubicacion": "Buenos Aires",
-    "descripcion": "Se busca un administrador de bases de datos con experiencia en PostgreSQL y MySQL. El candidato deberá asegurar la disponibilidad, seguridad y rendimiento de las bases de datos de producción.",
+    "title": "Administrador de Bases de Datos",
+    "company": "Secure Data Corp.",
+    "location": "Buenos Aires",
+    "description": "Se busca un administrador de bases de datos con experiencia en PostgreSQL y MySQL. El candidato deberá asegurar la disponibilidad, seguridad y rendimiento de las bases de datos de producción.",
     "data": {
       "technology": ["postgresql", "mysql", "mongodb", "redis"],
-      "modalidad": "bsas",
-      "nivel": "mid-level"
+      "modality": "bsas",
+      "level": "mid-level"
     },
     "content": {
       "description": "Secure Data Corp. busca un Administrador de Bases de Datos experimentado para gestionar y optimizar nuestros sistemas de bases de datos críticos. Serás responsable de garantizar la integridad, disponibilidad y seguridad de los datos de la empresa.",
@@ -116,10 +116,10 @@
   },
   {
     "id": "bb8f2a99-6a20-4f9e-912a-16f54a49b8c3",
-    "titulo": "Especialista en Ciberseguridad",
-    "empresa": "SafeNet Solutions",
-    "ubicacion": "Remoto",
-    "descripcion": "Buscamos un especialista en ciberseguridad con conocimientos en protección de infraestructuras, análisis de vulnerabilidades y respuesta ante incidentes. Se valorará experiencia con SIEM y certificaciones de seguridad.",
+    "title": "Especialista en Ciberseguridad",
+    "company": "SafeNet Solutions",
+    "location": "Remoto",
+    "description": "Buscamos un especialista en ciberseguridad con conocimientos en protección de infraestructuras, análisis de vulnerabilidades y respuesta ante incidentes. Se valorará experiencia con SIEM y certificaciones de seguridad.",
     "data": {
       "technology": [
         "siem",
@@ -127,8 +127,8 @@
         "firewall",
         "security-tools"
       ],
-      "modalidad": "remoto",
-      "nivel": "mid-level"
+      "modality": "remoto",
+      "level": "mid-level"
     },
     "content": {
       "description": "SafeNet Solutions busca un Especialista en Ciberseguridad para proteger nuestros sistemas y datos contra amenazas. Trabajarás en la implementación de medidas de seguridad, análisis de riesgos y respuesta a incidentes de seguridad.",
@@ -139,14 +139,14 @@
   },
   {
     "id": "fe7b2c54-4f47-4e2b-9e87-2b5413a6b24f",
-    "titulo": "Product Manager",
-    "empresa": "NextGen Technologies",
-    "ubicacion": "Madrid",
-    "descripcion": "Estamos buscando un Product Manager con experiencia en la definición y lanzamiento de productos digitales. Se requiere capacidad analítica, liderazgo y conocimiento en metodologías ágiles.",
+    "title": "Product Manager",
+    "company": "NextGen Technologies",
+    "location": "Madrid",
+    "description": "Estamos buscando un Product Manager con experiencia en la definición y lanzamiento de productos digitales. Se requiere capacidad analítica, liderazgo y conocimiento en metodologías ágiles.",
     "data": {
       "technology": ["agile", "scrum", "jira", "analytics", "product-strategy"],
-      "modalidad": "madrid",
-      "nivel": "senior"
+      "modality": "madrid",
+      "level": "senior"
     },
     "content": {
       "description": "NextGen Technologies busca un Product Manager senior para liderar el desarrollo y lanzamiento de productos digitales innovadores. Serás responsable de definir la visión del producto, trabajar con stakeholders y guiar equipos multifuncionales.",
@@ -157,14 +157,14 @@
   },
   {
     "id": "a71f7a92-56d9-4b42-9f16-cb29b40e5f2c",
-    "titulo": "Frontend Developer",
-    "empresa": "Bright Web Studio",
-    "ubicacion": "Valencia",
-    "descripcion": "Buscamos un desarrollador frontend con experiencia en React, TypeScript y Tailwind CSS. Se valorará conocimiento en optimización de rendimiento y accesibilidad web.",
+    "title": "Frontend Developer",
+    "company": "Bright Web Studio",
+    "location": "Valencia",
+    "description": "Buscamos un desarrollador frontend con experiencia en React, TypeScript y Tailwind CSS. Se valorará conocimiento en optimización de rendimiento y accesibilidad web.",
     "data": {
       "technology": ["react", "typescript", "tailwind", "css"],
-      "modalidad": "valencia",
-      "nivel": "mid-level"
+      "modality": "valencia",
+      "level": "mid-level"
     },
     "content": {
       "description": "Bright Web Studio busca un Frontend Developer con experiencia en tecnologías modernas para crear interfaces web atractivas y de alto rendimiento. Trabajarás en proyectos diversos que requieren atención al detalle y excelencia técnica.",
@@ -175,14 +175,14 @@
   },
   {
     "id": "f91e4c7b-3840-43da-8ad7-3a52e2a8cf1d",
-    "titulo": "Backend Developer",
-    "empresa": "APIWorks",
-    "ubicacion": "Bogotá",
-    "descripcion": "Estamos buscando un desarrollador backend con experiencia en Node.js, Express y bases de datos NoSQL. Se requiere conocimiento en arquitectura de microservicios.",
+    "title": "Backend Developer",
+    "company": "APIWorks",
+    "location": "Bogotá",
+    "description": "Estamos buscando un desarrollador backend con experiencia en Node.js, Express y bases de datos NoSQL. Se requiere conocimiento en arquitectura de microservicios.",
     "data": {
       "technology": ["node", "express", "mongodb", "microservices"],
-      "modalidad": "bogota",
-      "nivel": "mid"
+      "modality": "bogota",
+      "level": "mid"
     },
     "content": {
       "description": "APIWorks busca un Backend Developer con experiencia en Node.js para desarrollar APIs robustas y escalables. Trabajarás en arquitecturas de microservicios y sistemas distribuidos de alto rendimiento.",
@@ -193,10 +193,10 @@
   },
   {
     "id": "b65a3c9f-b174-4d86-b8a2-9cf9b1e13a22",
-    "titulo": "Ingeniero de Machine Learning",
-    "empresa": "AI Labs",
-    "ubicacion": "Remoto",
-    "descripcion": "Buscamos un ingeniero de machine learning con experiencia en modelos de predicción y procesamiento de datos. Se valorará conocimiento en TensorFlow, PyTorch y MLOps.",
+    "title": "Ingeniero de Machine Learning",
+    "company": "AI Labs",
+    "location": "Remoto",
+    "description": "Buscamos un ingeniero de machine learning con experiencia en modelos de predicción y procesamiento de datos. Se valorará conocimiento en TensorFlow, PyTorch y MLOps.",
     "data": {
       "technology": [
         "python",
@@ -205,8 +205,8 @@
         "scikit-learn",
         "mlops"
       ],
-      "modalidad": "remoto",
-      "nivel": "senior"
+      "modality": "remoto",
+      "level": "senior"
     },
     "content": {
       "description": "AI Labs busca un Ingeniero de Machine Learning senior para desarrollar e implementar modelos de ML en producción. Trabajarás en proyectos de vanguardia aplicando técnicas avanzadas de aprendizaje automático para resolver problemas complejos.",
@@ -217,14 +217,14 @@
   },
   {
     "id": "e8d13c45-36cb-46cf-8f9d-8a0a7b532b8b",
-    "titulo": "QA Automation Engineer",
-    "empresa": "Quality First",
-    "ubicacion": "Lima",
-    "descripcion": "Se busca ingeniero de QA con experiencia en automatización de pruebas utilizando herramientas como Selenium, Cypress o Playwright. Conocimiento deseado en CI/CD.",
+    "title": "QA Automation Engineer",
+    "company": "Quality First",
+    "location": "Lima",
+    "description": "Se busca ingeniero de QA con experiencia en automatización de pruebas utilizando herramientas como Selenium, Cypress o Playwright. Conocimiento deseado en CI/CD.",
     "data": {
       "technology": ["selenium", "cypress", "playwright", "jest", "testing"],
-      "modalidad": "lima",
-      "nivel": "mid-level"
+      "modality": "lima",
+      "level": "mid-level"
     },
     "content": {
       "description": "Quality First busca un QA Automation Engineer para desarrollar y mantener suites de pruebas automatizadas. Serás clave en asegurar la calidad del software mediante estrategias de testing efectivas.",
@@ -235,14 +235,14 @@
   },
   {
     "id": "d2e93b8a-0b41-4d09-9a52-36a0f418d493",
-    "titulo": "Administrador de Sistemas",
-    "empresa": "InfraTech Global",
-    "ubicacion": "Santiago de Chile",
-    "descripcion": "Buscamos un administrador de sistemas con experiencia en Linux, Docker y monitoreo de servidores. Conocimiento en scripting Bash o Python será un plus.",
+    "title": "Administrador de Sistemas",
+    "company": "InfraTech Global",
+    "location": "Santiago de Chile",
+    "description": "Buscamos un administrador de sistemas con experiencia en Linux, Docker y monitoreo de servidores. Conocimiento en scripting Bash o Python será un plus.",
     "data": {
       "technology": ["linux", "docker", "bash", "python", "monitoring"],
-      "modalidad": "santiago",
-      "nivel": "mid-level"
+      "modality": "santiago",
+      "level": "mid-level"
     },
     "content": {
       "description": "InfraTech Global busca un Administrador de Sistemas para gestionar y mantener nuestra infraestructura de servidores Linux. Serás responsable de garantizar la disponibilidad, rendimiento y seguridad de nuestros sistemas.",
@@ -253,14 +253,14 @@
   },
   {
     "id": "cc0c1fae-4e85-4e2c-9b02-f12f9df8a2c9",
-    "titulo": "Scrum Master",
-    "empresa": "Agile Minds",
-    "ubicacion": "Madrid",
-    "descripcion": "Estamos buscando un Scrum Master con experiencia en metodologías ágiles y gestión de equipos multidisciplinarios. Certificación Scrum Master deseable.",
+    "title": "Scrum Master",
+    "company": "Agile Minds",
+    "location": "Madrid",
+    "description": "Estamos buscando un Scrum Master con experiencia en metodologías ágiles y gestión de equipos multidisciplinarios. Certificación Scrum Master deseable.",
     "data": {
       "technology": ["scrum", "agile", "jira", "confluence", "kanban"],
-      "modalidad": "madrid",
-      "nivel": "mid-level"
+      "modality": "madrid",
+      "level": "mid-level"
     },
     "content": {
       "description": "Agile Minds busca un Scrum Master para facilitar y liderar equipos ágiles de desarrollo. Serás responsable de asegurar que el equipo siga las prácticas Scrum y alcance sus objetivos de sprint.",
@@ -271,14 +271,14 @@
   },
   {
     "id": "a2f1d8c6-b72c-45f5-bcc5-5c1d1f39b0b1",
-    "titulo": "Soporte Técnico Nivel 2",
-    "empresa": "HelpDesk Pro",
-    "ubicacion": "Monterrey",
-    "descripcion": "Buscamos un técnico de soporte con habilidades en resolución de incidencias, redes y sistemas operativos. Se requiere atención al detalle y excelente trato con el usuario.",
+    "title": "Soporte Técnico Nivel 2",
+    "company": "HelpDesk Pro",
+    "location": "Monterrey",
+    "description": "Buscamos un técnico de soporte con habilidades en resolución de incidencias, redes y sistemas operativos. Se requiere atención al detalle y excelente trato con el usuario.",
     "data": {
       "technology": ["windows", "linux", "networking", "troubleshooting"],
-      "modalidad": "monterrey",
-      "nivel": "junior"
+      "modality": "monterrey",
+      "level": "junior"
     },
     "content": {
       "description": "HelpDesk Pro busca un Técnico de Soporte Nivel 2 para atender incidencias técnicas escaladas y brindar soluciones efectivas. Serás parte de un equipo dedicado a garantizar la satisfacción de nuestros usuarios.",
@@ -289,14 +289,14 @@
   },
   {
     "id": "b3c8e9f2-7d41-4e92-a8b3-2f5c6d8e9a1b",
-    "titulo": "Full Stack Developer",
-    "empresa": "WebDev Masters",
-    "ubicacion": "Remoto",
-    "descripcion": "Se busca desarrollador full stack con dominio de tecnologías frontend y backend. Experiencia con React, Node.js, PostgreSQL y Docker es esencial.",
+    "title": "Full Stack Developer",
+    "company": "WebDev Masters",
+    "location": "Remoto",
+    "description": "Se busca desarrollador full stack con dominio de tecnologías frontend y backend. Experiencia con React, Node.js, PostgreSQL y Docker es esencial.",
     "data": {
       "technology": ["react", "node", "postgresql", "docker", "typescript"],
-      "modalidad": "remoto",
-      "nivel": "senior"
+      "modality": "remoto",
+      "level": "senior"
     },
     "content": {
       "description": "WebDev Masters busca un Full Stack Developer senior con experiencia completa en el desarrollo de aplicaciones web. Trabajarás en proyectos end-to-end, desde el diseño de la UI hasta la arquitectura de backend.",
@@ -306,15 +306,15 @@
     }
   },
   {
-    "id": "c4d9f0a3-8e52-4f93-b9c4-3g6d7e9f0b2c",
-    "titulo": "Data Engineer",
-    "empresa": "BigData Solutions",
-    "ubicacion": "Ciudad de México",
-    "descripcion": "Buscamos ingeniero de datos con experiencia en pipelines ETL, Apache Spark y arquitecturas de data lakes. Conocimientos en AWS o GCP requeridos.",
+    "id": "8f3c9d2a-1b7e-4652-a842-4d61a0f3e7b1",
+    "title": "Data Engineer",
+    "company": "BigData Solutions",
+    "location": "Ciudad de México",
+    "description": "Buscamos ingeniero de datos con experiencia en pipelines ETL, Apache Spark y arquitecturas de data lakes. Conocimientos en AWS o GCP requeridos.",
     "data": {
       "technology": ["python", "spark", "aws", "sql", "airflow"],
-      "modalidad": "cdmx",
-      "nivel": "mid-level"
+      "modality": "cdmx",
+      "level": "mid-level"
     },
     "content": {
       "description": "BigData Solutions busca un Data Engineer para diseñar e implementar pipelines de datos escalables. Trabajarás con grandes volúmenes de datos, construyendo infraestructura que permita análisis y decisiones basadas en datos.",
@@ -324,15 +324,15 @@
     }
   },
   {
-    "id": "d5e0a1b4-9f63-5a04-c0d5-4h7e8f0a1c3d",
-    "titulo": "iOS Developer",
-    "empresa": "AppFactory Inc.",
-    "ubicacion": "Guadalajara",
-    "descripcion": "Desarrollador iOS con experiencia en Swift, SwiftUI y arquitectura MVVM. Se valorará portfolio de apps publicadas en App Store.",
+    "id": "9a4d0e3b-2c8f-4753-b953-5e72b1a4f8c2",
+    "title": "iOS Developer",
+    "company": "AppFactory Inc.",
+    "location": "Guadalajara",
+    "description": "Desarrollador iOS con experiencia en Swift, SwiftUI y arquitectura MVVM. Se valorará portfolio de apps publicadas en App Store.",
     "data": {
       "technology": ["swift", "swiftui", "ios", "xcode"],
-      "modalidad": "guadalajara",
-      "nivel": "mid-level"
+      "modality": "guadalajara",
+      "level": "mid-level"
     },
     "content": {
       "description": "AppFactory Inc. busca un iOS Developer apasionado por crear aplicaciones móviles excepcionales. Trabajarás en el desarrollo de apps nativas para iPhone y iPad utilizando las últimas tecnologías de Apple.",
@@ -342,11 +342,11 @@
     }
   },
   {
-    "id": "e6f1b2c5-0a74-6b15-d1e6-5i8f9a1b2d4e",
-    "titulo": "Cloud Architect",
-    "empresa": "CloudNative Corp",
-    "ubicacion": "Remoto",
-    "descripcion": "Arquitecto cloud senior con expertise en diseño de soluciones escalables en AWS, Azure o GCP. Certificaciones cloud altamente valoradas.",
+    "id": "ab5e1f4c-3d90-4864-a864-6f83c2b5a9d3",
+    "title": "Cloud Architect",
+    "company": "CloudNative Corp",
+    "location": "Remoto",
+    "description": "Arquitecto cloud senior con expertise en diseño de soluciones escalables en AWS, Azure o GCP. Certificaciones cloud altamente valoradas.",
     "data": {
       "technology": [
         "aws",
@@ -355,8 +355,8 @@
         "terraform",
         "microservices"
       ],
-      "modalidad": "remoto",
-      "nivel": "senior"
+      "modality": "remoto",
+      "level": "senior"
     },
     "content": {
       "description": "CloudNative Corp busca un Cloud Architect senior para diseñar soluciones cloud escalables, seguras y costo-efectivas. Liderarás iniciativas de arquitectura cloud y guiarás a equipos en la adopción de mejores prácticas.",
@@ -366,15 +366,15 @@
     }
   },
   {
-    "id": "f7g2c3d6-1b85-7c26-e2f7-6j9a0b2c3e5f",
-    "titulo": "UX Researcher",
-    "empresa": "UserCentric Design",
-    "ubicacion": "Barcelona",
-    "descripcion": "Investigador UX para realizar estudios de usuarios, análisis de usabilidad y pruebas A/B. Experiencia con metodologías cualitativas y cuantitativas.",
+    "id": "bc6f2a5d-4ea1-4975-b975-7094d3c6b0e4",
+    "title": "UX Researcher",
+    "company": "UserCentric Design",
+    "location": "Barcelona",
+    "description": "Investigador UX para realizar estudios de usuarios, análisis de usabilidad y pruebas A/B. Experiencia con metodologías cualitativas y cuantitativas.",
     "data": {
       "technology": ["figma", "analytics", "user-research", "prototyping"],
-      "modalidad": "barcelona",
-      "nivel": "mid-level"
+      "modality": "barcelona",
+      "level": "mid-level"
     },
     "content": {
       "description": "UserCentric Design busca un UX Researcher para comprender las necesidades de los usuarios y guiar decisiones de diseño basadas en evidencia. Trabajarás en investigaciones que impactan directamente en la experiencia del producto.",
@@ -384,15 +384,15 @@
     }
   },
   {
-    "id": "g8h3d4e7-2c96-8d37-f3g8-7k0b1c3d4f6g",
-    "titulo": "Database Administrator",
-    "empresa": "DataSecure Systems",
-    "ubicacion": "Buenos Aires",
-    "descripcion": "Administrador de bases de datos con expertise en Oracle, SQL Server y MongoDB. Responsable de optimización, backups y recuperación ante desastres.",
+    "id": "cd7a3b6e-5fb2-4a86-ac86-81a5e4d7c1f5",
+    "title": "Database Administrator",
+    "company": "DataSecure Systems",
+    "location": "Buenos Aires",
+    "description": "Administrador de bases de datos con expertise en Oracle, SQL Server y MongoDB. Responsable de optimización, backups y recuperación ante desastres.",
     "data": {
       "technology": ["oracle", "sql-server", "mongodb", "postgresql"],
-      "modalidad": "bsas",
-      "nivel": "senior"
+      "modality": "bsas",
+      "level": "senior"
     },
     "content": {
       "description": "DataSecure Systems busca un Database Administrator senior con experiencia en múltiples plataformas de bases de datos. Serás responsable de gestionar bases de datos críticas en entornos enterprise de alta disponibilidad.",
@@ -402,11 +402,11 @@
     }
   },
   {
-    "id": "h9i4e5f8-3d07-9e48-g4h9-8l1c2d4e5g7h",
-    "titulo": "Penetration Tester",
-    "empresa": "SecureIT Labs",
-    "ubicacion": "Remoto",
-    "descripcion": "Especialista en pentesting para evaluar seguridad de aplicaciones web, móviles e infraestructura. Certificaciones OSCP o CEH deseables.",
+    "id": "de8b4c7f-60c3-4b97-bd97-92b6f5e8d2a6",
+    "title": "Penetration Tester",
+    "company": "SecureIT Labs",
+    "location": "Remoto",
+    "description": "Especialista en pentesting para evaluar seguridad de aplicaciones web, móviles e infraestructura. Certificaciones OSCP o CEH deseables.",
     "data": {
       "technology": [
         "kali-linux",
@@ -414,8 +414,8 @@
         "security-tools",
         "python"
       ],
-      "modalidad": "remoto",
-      "nivel": "mid-level"
+      "modality": "remoto",
+      "level": "mid-level"
     },
     "content": {
       "description": "SecureIT Labs busca un Penetration Tester para realizar evaluaciones de seguridad ofensivas. Identificarás vulnerabilidades en sistemas, aplicaciones e infraestructura antes de que sean explotadas por actores maliciosos.",
@@ -425,15 +425,15 @@
     }
   },
   {
-    "id": "i0j5f6g9-4e18-0f59-h5i0-9m2d3e5f6h8i",
-    "titulo": "Technical Product Owner",
-    "empresa": "AgileTech Solutions",
-    "ubicacion": "Madrid",
-    "descripcion": "Product Owner técnico con background en desarrollo de software. Experiencia gestionando backlog, escribiendo user stories y trabajando con equipos ágiles.",
+    "id": "ef9c5d80-71d4-4ca8-a8a8-a3c7a6f9e3b7",
+    "title": "Technical Product Owner",
+    "company": "AgileTech Solutions",
+    "location": "Madrid",
+    "description": "Product Owner técnico con background en desarrollo de software. Experiencia gestionando backlog, escribiendo user stories y trabajando con equipos ágiles.",
     "data": {
       "technology": ["agile", "scrum", "jira", "sql", "api"],
-      "modalidad": "madrid",
-      "nivel": "senior"
+      "modality": "madrid",
+      "level": "senior"
     },
     "content": {
       "description": "AgileTech Solutions busca un Technical Product Owner con sólido background técnico para liderar productos complejos. Combinarás conocimientos técnicos con habilidades de producto para maximizar el valor entregado.",
@@ -443,15 +443,15 @@
     }
   },
   {
-    "id": "j1k6g7h0-5f29-1g60-i6j1-0n3e4f6g7i9j",
-    "titulo": "React Native Developer",
-    "empresa": "MobileFirst Studio",
-    "ubicacion": "Valencia",
-    "descripcion": "Desarrollador especializado en React Native para crear aplicaciones móviles multiplataforma. Experiencia con integración de APIs y publicación en stores.",
+    "id": "f0ad6e91-82e5-4db9-b9b9-b4d8b70af4c8",
+    "title": "React Native Developer",
+    "company": "MobileFirst Studio",
+    "location": "Valencia",
+    "description": "Desarrollador especializado en React Native para crear aplicaciones móviles multiplataforma. Experiencia con integración de APIs y publicación en stores.",
     "data": {
       "technology": ["react-native", "javascript", "typescript", "redux"],
-      "modalidad": "valencia",
-      "nivel": "mid-level"
+      "modality": "valencia",
+      "level": "mid-level"
     },
     "content": {
       "description": "MobileFirst Studio busca un React Native Developer para desarrollar aplicaciones móviles multiplataforma de alta calidad. Crearás experiencias móviles fluidas que funcionen perfectamente en iOS y Android.",
@@ -461,15 +461,15 @@
     }
   },
   {
-    "id": "k2l7h8i1-6g30-2h71-j7k2-1o4f5g7h8j0k",
-    "titulo": "Golang Backend Engineer",
-    "empresa": "ScalableSystems",
-    "ubicacion": "Bogotá",
-    "descripcion": "Ingeniero backend especializado en Go para desarrollo de microservicios de alto rendimiento. Experiencia con gRPC, PostgreSQL y sistemas distribuidos.",
+    "id": "a1be7fa2-93f6-4eca-8aca-c5e9c81b05d9",
+    "title": "Golang Backend Engineer",
+    "company": "ScalableSystems",
+    "location": "Bogotá",
+    "description": "Ingeniero backend especializado en Go para desarrollo de microservicios de alto rendimiento. Experiencia con gRPC, PostgreSQL y sistemas distribuidos.",
     "data": {
       "technology": ["golang", "grpc", "postgresql", "redis", "kubernetes"],
-      "modalidad": "bogota",
-      "nivel": "senior"
+      "modality": "bogota",
+      "level": "senior"
     },
     "content": {
       "description": "ScalableSystems busca un Golang Backend Engineer senior para desarrollar microservicios de alto rendimiento. Trabajarás en sistemas distribuidos que manejan millones de requests diarios.",
@@ -479,11 +479,11 @@
     }
   },
   {
-    "id": "l3m8i9j2-7h41-3i82-k8l3-2p5g6h8i9k1l",
-    "titulo": "AI Research Scientist",
-    "empresa": "DeepLearning Labs",
-    "ubicacion": "Remoto",
-    "descripcion": "Científico investigador en IA para desarrollar modelos de deep learning. PhD o Máster en IA/ML requerido. Publicaciones en conferencias valoradas.",
+    "id": "b2cf80b3-a407-48bb-dbdb-d6fad92c16ea",
+    "title": "AI Research Scientist",
+    "company": "DeepLearning Labs",
+    "location": "Remoto",
+    "description": "Científico investigador en IA para desarrollar modelos de deep learning. PhD o Máster en IA/ML requerido. Publicaciones en conferencias valoradas.",
     "data": {
       "technology": [
         "python",
@@ -492,8 +492,8 @@
         "nlp",
         "computer-vision"
       ],
-      "modalidad": "remoto",
-      "nivel": "senior"
+      "modality": "remoto",
+      "level": "senior"
     },
     "content": {
       "description": "DeepLearning Labs busca un AI Research Scientist para desarrollar modelos de deep learning de vanguardia. Trabajarás en proyectos de investigación avanzados en NLP y Computer Vision.",
@@ -503,15 +503,15 @@
     }
   },
   {
-    "id": "m4n9j0k3-8i52-4j93-l9m4-3q6h7i9j0l2m",
-    "titulo": "Manual QA Tester",
-    "empresa": "QualityAssurance Pro",
-    "ubicacion": "Lima",
-    "descripcion": "Tester manual para ejecutar planes de prueba, reportar bugs y validar funcionalidades. Experiencia con metodologías de testing y herramientas de gestión de casos.",
+    "id": "c3d091c4-b518-49cc-9cec-e70bae3d27fb",
+    "title": "Manual QA Tester",
+    "company": "QualityAssurance Pro",
+    "location": "Lima",
+    "description": "Tester manual para ejecutar planes de prueba, reportar bugs y validar funcionalidades. Experiencia con metodologías de testing y herramientas de gestión de casos.",
     "data": {
       "technology": ["testing", "jira", "test-case-management", "sql"],
-      "modalidad": "lima",
-      "nivel": "junior"
+      "modality": "lima",
+      "level": "junior"
     },
     "content": {
       "description": "QualityAssurance Pro busca un Manual QA Tester para asegurar la calidad de nuestros productos de software. Ejecutarás pruebas manuales detalladas y ayudarás a mantener altos estándares de calidad.",
@@ -521,11 +521,11 @@
     }
   },
   {
-    "id": "n5o0k1l4-9j63-5k04-m0n5-4r7i8j0k1m3n",
-    "titulo": "Site Reliability Engineer",
-    "empresa": "ReliableOps",
-    "ubicacion": "Santiago de Chile",
-    "descripcion": "SRE para garantizar disponibilidad y rendimiento de sistemas críticos. Experiencia con Kubernetes, monitoring, alerting y automatización.",
+    "id": "d4e1a2d5-c629-4add-afdd-f81cbf4e38ac",
+    "title": "Site Reliability Engineer",
+    "company": "ReliableOps",
+    "location": "Santiago de Chile",
+    "description": "SRE para garantizar disponibilidad y rendimiento de sistemas críticos. Experiencia con Kubernetes, monitoring, alerting y automatización.",
     "data": {
       "technology": [
         "kubernetes",
@@ -534,8 +534,8 @@
         "terraform",
         "python"
       ],
-      "modalidad": "santiago",
-      "nivel": "senior"
+      "modality": "santiago",
+      "level": "senior"
     },
     "content": {
       "description": "ReliableOps busca un Site Reliability Engineer senior para garantizar la confiabilidad, disponibilidad y rendimiento de nuestros sistemas. Aplicarás principios de ingeniería de software a operaciones de infraestructura.",
@@ -545,15 +545,15 @@
     }
   },
   {
-    "id": "o6p1l2m5-0k74-6l15-n1o6-5s8j9k1l2n4o",
-    "titulo": "Agile Coach",
-    "empresa": "TransformationHub",
-    "ubicacion": "Madrid",
-    "descripcion": "Coach ágil para guiar equipos y organizaciones en transformación ágil. Experiencia con Scrum, Kanban, SAFe y facilitación de workshops.",
+    "id": "e5f2b3e6-d73a-4801-b0e4-a92dc05f49bd",
+    "title": "Agile Coach",
+    "company": "TransformationHub",
+    "location": "Madrid",
+    "description": "Coach ágil para guiar equipos y organizaciones en transformación ágil. Experiencia con Scrum, Kanban, SAFe y facilitación de workshops.",
     "data": {
       "technology": ["scrum", "kanban", "safe", "agile", "coaching"],
-      "modalidad": "madrid",
-      "nivel": "senior"
+      "modality": "madrid",
+      "level": "senior"
     },
     "content": {
       "description": "TransformationHub busca un Agile Coach senior para guiar transformaciones ágiles organizacionales. Trabajarás con equipos y liderazgo para adoptar e integrar prácticas ágiles efectivas.",
@@ -563,15 +563,15 @@
     }
   },
   {
-    "id": "p7q2m3n6-1l85-7m26-o2p7-6t9k0l2m3o5p",
-    "titulo": "IT Support Specialist",
-    "empresa": "TechSupport Solutions",
-    "ubicacion": "Monterrey",
-    "descripcion": "Especialista de soporte IT para atención de incidencias, mantenimiento de equipos y administración de usuarios. Conocimientos de Active Directory y Office 365.",
+    "id": "f6a3c4f7-e84b-4912-a1f5-ba3ed16a5ace",
+    "title": "IT Support Specialist",
+    "company": "TechSupport Solutions",
+    "location": "Monterrey",
+    "description": "Especialista de soporte IT para atención de incidencias, mantenimiento de equipos y administración de usuarios. Conocimientos de Active Directory y Office 365.",
     "data": {
       "technology": ["windows", "office365", "active-directory", "networking"],
-      "modalidad": "monterrey",
-      "nivel": "junior"
+      "modality": "monterrey",
+      "level": "junior"
     },
     "content": {
       "description": "TechSupport Solutions busca un IT Support Specialist para brindar soporte técnico integral a usuarios finales. Serás parte de un equipo dedicado a mantener la productividad de los empleados.",
@@ -581,11 +581,11 @@
     }
   },
   {
-    "id": "q8r3n4o7-2m96-8n37-p3q8-7u0l1m3n4p6q",
-    "titulo": "Blockchain Developer",
-    "empresa": "CryptoTech Innovations",
-    "ubicacion": "Remoto",
-    "descripcion": "Desarrollador blockchain para crear smart contracts y dApps. Experiencia con Solidity, Ethereum, Web3.js y frameworks como Hardhat o Truffle.",
+    "id": "a7b4d5a8-f95c-4a23-b2a6-cb4fe27b6bdf",
+    "title": "Blockchain Developer",
+    "company": "CryptoTech Innovations",
+    "location": "Remoto",
+    "description": "Desarrollador blockchain para crear smart contracts y dApps. Experiencia con Solidity, Ethereum, Web3.js y frameworks como Hardhat o Truffle.",
     "data": {
       "technology": [
         "solidity",
@@ -594,8 +594,8 @@
         "javascript",
         "blockchain"
       ],
-      "modalidad": "remoto",
-      "nivel": "mid-level"
+      "modality": "remoto",
+      "level": "mid-level"
     },
     "content": {
       "description": "CryptoTech Innovations busca un Blockchain Developer para desarrollar smart contracts y aplicaciones descentralizadas. Trabajarás en proyectos innovadores en el ecosistema blockchain.",
@@ -605,15 +605,15 @@
     }
   },
   {
-    "id": "r9s4o5p8-3n07-9o48-q4r9-8v1m2n4o5q7r",
-    "titulo": "Business Intelligence Analyst",
-    "empresa": "DataInsights Corp",
-    "ubicacion": "Ciudad de México",
-    "descripcion": "Analista de BI para crear dashboards, reportes y análisis de datos de negocio. Experiencia con Power BI, Tableau y SQL requerida.",
+    "id": "b8c5e6b9-0a6d-4b34-c3b7-dc50f38c7ce0",
+    "title": "Business Intelligence Analyst",
+    "company": "DataInsights Corp",
+    "location": "Ciudad de México",
+    "description": "Analista de BI para crear dashboards, reportes y análisis de datos de negocio. Experiencia con Power BI, Tableau y SQL requerida.",
     "data": {
       "technology": ["powerbi", "tableau", "sql", "excel", "dax"],
-      "modalidad": "cdmx",
-      "nivel": "mid-level"
+      "modality": "cdmx",
+      "level": "mid-level"
     },
     "content": {
       "description": "DataInsights Corp busca un Business Intelligence Analyst para transformar datos en insights accionables. Crearás visualizaciones y reportes que impulsan decisiones de negocio estratégicas.",
@@ -623,15 +623,15 @@
     }
   },
   {
-    "id": "s0t5p6q9-4o18-0p59-r5s0-9w2n3o5p6r8s",
-    "titulo": "Android Developer",
-    "empresa": "MobileTech Studio",
-    "ubicacion": "Guadalajara",
-    "descripcion": "Desarrollador Android nativo con experiencia en Kotlin, Jetpack Compose y arquitectura MVVM. Portfolio de apps publicadas es un plus.",
+    "id": "c9d6f7ca-1b7e-4c45-d4c8-ed61a49d8df1",
+    "title": "Android Developer",
+    "company": "MobileTech Studio",
+    "location": "Guadalajara",
+    "description": "Desarrollador Android nativo con experiencia en Kotlin, Jetpack Compose y arquitectura MVVM. Portfolio de apps publicadas es un plus.",
     "data": {
       "technology": ["kotlin", "android", "jetpack-compose", "mvvm"],
-      "modalidad": "guadalajara",
-      "nivel": "mid-level"
+      "modality": "guadalajara",
+      "level": "mid-level"
     },
     "content": {
       "description": "MobileTech Studio busca un Android Developer para desarrollar aplicaciones nativas de alta calidad. Trabajarás con las últimas tecnologías de Android para crear experiencias móviles excepcionales.",
@@ -641,11 +641,11 @@
     }
   },
   {
-    "id": "t1u6q7r0-5p29-1q60-s6t1-0x3o4p6q7s9t",
-    "titulo": "Technical Writer",
-    "empresa": "DocuTech Solutions",
-    "ubicacion": "Remoto",
-    "descripcion": "Redactor técnico para crear documentación de APIs, guías de usuario y tutoriales. Background técnico en desarrollo de software valorado.",
+    "id": "d0e7a8db-2c8f-4d56-e5d9-fe72b50e9e02",
+    "title": "Technical Writer",
+    "company": "DocuTech Solutions",
+    "location": "Remoto",
+    "description": "Redactor técnico para crear documentación de APIs, guías de usuario y tutoriales. Background técnico en desarrollo de software valorado.",
     "data": {
       "technology": [
         "markdown",
@@ -653,8 +653,8 @@
         "api-documentation",
         "technical-writing"
       ],
-      "modalidad": "remoto",
-      "nivel": "junior"
+      "modality": "remoto",
+      "level": "junior"
     },
     "content": {
       "description": "DocuTech Solutions busca un Technical Writer para crear documentación clara y precisa de productos de software. Traducirás conceptos técnicos complejos en contenido accesible para diversos públicos.",

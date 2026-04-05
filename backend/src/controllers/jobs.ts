@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express';
 import type { JobQueryParams } from '../types/jobs.ts';
+import { validateNewJob, validatePartialJob } from '../schemas/job.ts';
 import jobModel from '../models/job.ts';
 
 const getJobs = (req: Request, res: Response) => {
@@ -28,14 +29,40 @@ const getJobById = (req: Request, res: Response) => {
 };
 
 const createJob = (req: Request, res: Response) => {
-  const newJob = jobModel.createJob(req.body);
+  const result = validateNewJob(req.body);
+
+  if (!result.success) {
+    const errors = result.error.issues.map((issue) => ({
+      field: issue.path.join('.'),
+      message: issue.message,
+    }));
+
+    return res.status(400).json({ message: 'Invalid job data', errors });
+  }
+
+  const newJob = jobModel.createJob(result.data);
   return res.status(201).json(newJob);
 };
 
 const updateJob = (req: Request, res: Response) => {
   const { id } = req.params;
-  const jobData = req.body;
-  const updatedJob = jobModel.updateJob(id as string, jobData);
+  const result = validatePartialJob(req.body);
+
+  if (!result.success) {
+    const errors = result.error.issues.map((issue) => ({
+      field: issue.path.join('.'),
+      message: issue.message,
+    }));
+
+    return res.status(400).json({ message: 'Invalid job data', errors });
+  }
+
+  const updatedJob = jobModel.updateJob(id as string, result.data);
+
+  if (!updatedJob) {
+    return res.status(404).json({ message: 'Job not found' });
+  }
+
   return res.status(200).json(updatedJob);
 };
 
