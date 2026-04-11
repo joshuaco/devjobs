@@ -17,3 +17,7 @@ export const sampleJob: Omit<Job, 'id'> = {
     about: 'We are Acme Corp',
   },
 };
+
+export const sampleJobUpdated: Partial<Job> = {
+  title: 'Analista de Software',
+};

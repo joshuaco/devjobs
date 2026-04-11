@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { sampleJob } from '../mocks/jobs.ts';
+import { sampleJob, sampleJobUpdated } from '../mocks/jobs.ts';
 import request from 'supertest';
 import app from '../../src/server.ts';
 
@@ -47,5 +47,37 @@ describe('POST /api/jobs', () => {
     expect(response.status).toBe(201);
     expect(response.body).toHaveProperty('id');
     expect(response.body.title).toBe(sampleJob.title);
+  });
+});
+
+describe('PUT /api/jobs/:id', () => {
+  it('returns status 400 for an invalid UUID', async () => {
+    const response = await request(app)
+      .put('/api/jobs/invalid-uuid')
+      .send(sampleJob);
+
+    expect(response.status).toBe(400);
+    expect(response.body).toHaveProperty('message');
+    expect(response.body.message).toBe('Invalid job ID');
+  });
+
+  it('returns status 404 for a non-existent job', async () => {
+    const response = await request(app)
+      .put('/api/jobs/123e4567-e89b-12d3-a456-426614174000')
+      .send(sampleJob);
+
+    expect(response.status).toBe(404);
+    expect(response.body).toHaveProperty('message');
+    expect(response.body.message).toBe('Job not found');
+  });
+
+  it('updates a job and returns 200', async () => {
+    const response = await request(app)
+      .put(`/api/jobs/d35b2c89-5d60-4f26-b19a-6cfb2f1a0f57`)
+      .send(sampleJobUpdated);
+
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty('id');
+    expect(response.body.title).toBe('Analista de Software');
   });
 });
