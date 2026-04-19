@@ -7,14 +7,14 @@ type Job = {
   };
   data: {
     technology: string[];
-    modalidad: string;
-    nivel: string;
+    modality: string;
+    level: string;
   };
-  descripcion: string;
-  empresa: string;
+  description: string;
+  company: string;
   id: string;
-  titulo: string;
-  ubicacion: string;
+  title: string;
+  location: string;
 };
 
 type Jobs = Job[];

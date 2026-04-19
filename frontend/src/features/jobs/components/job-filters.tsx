@@ -12,8 +12,8 @@ function JobFilters({ onFiltersChange, filters, jobs }: JobFiltersProps) {
   const technologies = Array.from(
     new Set(jobs.map((job) => job.data.technology).flat())
   );
-  const locations = Array.from(new Set(jobs.map((job) => job.data.modalidad)));
-  const experiences = Array.from(new Set(jobs.map((job) => job.data.nivel)));
+  const locations = Array.from(new Set(jobs.map((job) => job.data.modality)));
+  const experiences = Array.from(new Set(jobs.map((job) => job.data.level)));
 
   return (
     <div className='grid grid-cols-2 sm:flex gap-3 items-center'>

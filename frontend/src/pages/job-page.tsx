@@ -13,11 +13,11 @@ function JobPageHeader({ job }: { job: Job; }) {
     <header className="flex justify-between items-center gap-4">
       <div className="flex flex-col gap-1">
         <h1 className="text-2xl font-bold text-white md:text-3xl">
-          {job.titulo}
+          {job.title}
         </h1>
         <p className="text-muted">
           <span className='flex gap-1'>
-            <span>{job.empresa}</span> - <span className='border-b-2 border-primary-hover text-white-gray'>{job.ubicacion}</span>
+            <span>{job.company}</span> - <span className='border-b-2 border-primary-hover text-white-gray'>{job.location}</span>
             {isLoggedIn && (
               <button
                 type='button'
@@ -76,7 +76,7 @@ function JobPage() {
           Empleos{' '}
         </button>
         <span className="text-muted">/</span>
-        <span className="text-white">{job.titulo}</span>
+        <span className="text-white">{job.title}</span>
       </nav>
 
       <section className="max-w-6xl mx-auto px-4 py-6">
@@ -84,7 +84,7 @@ function JobPage() {
 
         <article className='py-8 flex flex-col gap-3'>
           <h2 className="text-xl font-bold text-white md:text-2xl">Descripción de la oferta</h2>
-          <p className="text-white-gray">{job.descripcion}</p>
+          <p className="text-white-gray">{job.description}</p>
 
           <div className='flex flex-col gap-3 mt-2'>
             <h3 className="text-lg font-bold text-white md:text-xl pl-3 border-l-2 border-primary-light">Responsabilidades</h3>

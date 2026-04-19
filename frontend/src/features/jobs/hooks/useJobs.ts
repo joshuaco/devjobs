@@ -19,7 +19,7 @@ export function useJobs(filters: Filters, search: string, currentPage: number) {
       if (search) params.append('search', search);
       if (filters.technology) params.append('technology', filters.technology);
       if (filters.location) params.append('location', filters.location);
-      if (filters.experience) params.append('level', filters.experience);
+      if (filters.experience) params.append('experience', filters.experience);
 
       const offset = (currentPage - 1) * RESULTS_PER_PAGE;
       params.append('limit', RESULTS_PER_PAGE.toString());
@@ -40,7 +40,7 @@ export function useJobs(filters: Filters, search: string, currentPage: number) {
     fetchData();
   }, [filters, search, currentPage]);
 
-  const totalPages = Math.ceil(totalJobs / RESULTS_PER_PAGE) ?? 1;
+  const totalPages = Math.max(1, Math.ceil(totalJobs / RESULTS_PER_PAGE));
 
   return { jobs, totalPages, isLoading };
 }

@@ -24,10 +24,10 @@ function JobList({ isLoading, jobs, page, totalPages }: JobListProps) {
             <JobCard
               key={job.id}
               id={job.id}
-              title={job.titulo}
-              company={job.empresa}
-              location={job.ubicacion}
-              description={job.descripcion}
+              title={job.title}
+              company={job.company}
+              location={job.location}
+              description={job.description}
             />
           ))
         ) : (
