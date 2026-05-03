@@ -9,10 +9,10 @@ interface SearchFormProps {
 function SearchForm({ maxWidth = 'max-w-2xl', onSearch }: SearchFormProps) {
   const { search, handleSearch } = useSearch();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target as HTMLFormElement);
+    const formData = new FormData(e.currentTarget);
     const search = formData.get('search') as string;
 
     onSearch(search);

@@ -20,11 +20,11 @@ function Login() {
       <form className="mt-6 flex flex-col gap-4 mb-4">
         <div className="flex flex-col gap-2">
           <label htmlFor="email" className="text-sm font-medium text-white">Email</label>
-          <input type="email" id="email" className="w-full p-2 rounded-md border border-border" />
+          <input type="email" id="email" className="w-full p-2 rounded-md border border-border text-white bg-input" autoFocus />
         </div>
         <div className="flex flex-col gap-2">
           <label htmlFor="password" className="text-sm font-medium text-white">Contraseña</label>
-          <input type="password" id="password" className="w-full p-2 rounded-md border border-border" />
+          <input type="password" id="password" className="w-full p-2 rounded-md border border-border text-white bg-input" />
         </div>
       </form>
       <button type="button" className="w-full py-2 px-4 bg-primary-light text-white rounded-md hover:bg-primary-hover transition-colors" onClick={handleLogin}>Iniciar sesión</button>
